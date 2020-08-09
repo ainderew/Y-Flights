@@ -1,0 +1,6 @@
+#allow everything
+User-agent: *
+Allow: /
+
+
+Sitemap: https://www.y-flights.com/sitemap.xml

@@ -1,0 +1,472 @@
+@import "../../../styles/scss_variables/colors";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+// COMMON CLASSES
+// =============================================================================================
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 50%;
+}
+
+.justify-wrapper {
+  text-align: justify;
+}
+
+//TEXT STYLES -----------------------------------------------
+.span-italize {
+  font-style: italic;
+}
+
+.text-link {
+  text-decoration: none;
+  color: $main-color;
+}
+.text-link-h2 {
+  text-decoration: none;
+  color: $main-color;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+//Column-container ------------------------------------------
+.section-1-cont-2-col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  margin: 2rem 0;
+}
+.section-1-cont-3-col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.5rem;
+  margin: 3rem 0 5rem 0;
+}
+
+.spacer-vertical-1rem {
+  margin: 1rem 0;
+}
+.spacer-vertical-2rem {
+  margin: 2rem 0;
+}
+.spacer-vertical-3rem {
+  margin: 3rem 0;
+}
+.spacer-vertical-4rem {
+  margin: 4rem 0;
+}
+
+// =============================================================================================
+
+//PHONE MENU HIDDEN ON DESKTOP VERSION
+.phone-menu {
+  display: none;
+}
+
+// ------------------------------------------------------------------------------------------
+
+header {
+  width: 100%;
+  height: 80vh;
+  background: url(../../../assets/articles/bangkok/header.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .inner-header {
+    width: 85vw;
+  }
+
+  .phone-nav {
+    display: none;
+  }
+
+  .site-nav {
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .site-nav-solid {
+    background: #000;
+    animation: 1000ms opacityIn linear forwards;
+  }
+
+  .site-nav-inner {
+    width: 85vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .logo {
+      height: 4rem;
+    }
+  }
+  .site-ul {
+    display: flex;
+  }
+
+  .site-li {
+    list-style-type: none;
+    margin-left: 3rem;
+  }
+  .site-a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .header-h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 0px 0px 35px #000000;
+  }
+
+  .header-p {
+    color: #fff;
+    text-shadow: 0px 0px 25px #000000;
+  }
+}
+
+.section-1 {
+  margin: 3rem 0;
+
+  .section-1-h2 {
+    font-size: 2rem;
+  }
+
+  .section-1-ul {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+  .section-1-li {
+    list-style-type: none;
+    font-size: 0.7rem;
+  }
+  .section-1-img-small-wrapper {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  .section-1-img-small {
+    height: 100%;
+    transition: 200ms linear;
+  }
+  .section-1-img-small:hover {
+    transform: scale(1.1);
+  }
+  .section-1-img-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin: 3rem 0;
+  }
+
+  .section-1-img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: 200ms linear;
+  }
+  .section-1-img:hover {
+    transform: scale(1);
+  }
+  .section-1-h2 {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+  .section-1-ul-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-1-li-styled {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 0.5rem 0;
+  }
+}
+
+._42ef {
+  a{
+    display: none;
+  }
+}
+#HCB_comment_box {
+  .hcb-wrapper + div {
+    a {
+      opacity: 0;
+    }
+  }
+
+  .comment {
+    background: rgb(238, 238, 238);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .home-desc {
+    opacity: 0;
+  }
+
+  .btn,
+  .hcb-icon,
+  .hcb-door-in {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hcb-flag {
+    display: none;
+  }
+  .hcb-reply,
+  .hcb-like {
+    opacity: 1;
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
+.footer {
+  background: #f1f2f8;
+  height: 30vh;
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-h4 {
+    text-align: center;
+    // font-weight: 200;
+    color: #cdced3;
+  }
+  .link-h5 {
+    text-decoration: none;
+    color: $main-color;
+  }
+  
+  .social-media-ul{
+    display: flex;
+    margin: 1rem 0;
+  }
+  .social-media-li{
+      list-style-type: none;
+      margin: 0 .5rem;
+  }
+  
+  .social-media-icon{
+    width: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .section-1 {
+    .section-1-img-wrapper {
+      height: 550px;
+    }
+
+    .section-1-img {
+      height: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  // COMMON CLASSES
+  // ------------------------------------------------------------------------------------------
+
+  .inner {
+    width: 90%;
+  }
+
+  // ------------------------------------------------------------------------------------------
+
+  .phone-menu {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    position: fixed;
+    top: 4rem;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    background: $fourth-color;
+    z-index: 99999;
+
+    animation: 300ms menuIn linear forwards;
+
+    .phone-ul {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-evenly;
+
+      .phone-li {
+        list-style-type: none;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+    .phone-a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  header {
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    padding: 0 1rem;
+
+    .phone-nav {
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      background: $fourth-color;
+      padding: 0 1rem;
+      top: 0;
+      z-index: 10;
+
+      .logo-phone {
+        width: 8rem;
+      }
+      .burger-menu {
+        width: 1.5rem;
+      }
+      .close {
+        color: white;
+        font-size: 2rem;
+        font-weight: 1000;
+        display: none;
+      }
+    }
+    .site-nav {
+      display: none;
+    }
+
+    .site-nav-inner {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        width: 10rem;
+      }
+    }
+    .site-ul {
+      display: flex;
+    }
+
+    .site-li {
+      list-style-type: none;
+      margin-left: 3rem;
+    }
+    .site-a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .header-h1 {
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 0px 0px 15px #000000;
+    }
+
+    .header-p {
+      color: #fff;
+      text-shadow: 0px 0px 15px #000000;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    .header-h1 {
+      font-size: 1.5rem;
+      text-align: initial;
+      margin-bottom: 1rem;
+    }
+    .header-p {
+      font-size: 0.9rem;
+      text-align: initial;
+    }
+  }
+  .section-1 {
+    .section-1-h1 {
+      font-size: 1.7rem;
+    }
+
+    .section-1-p {
+      text-align: justify;
+    }
+    .section-1-img-small-wrapper {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .section-1-img-wrapper {
+      height: 250px;
+      margin: 3rem 0;
+    }
+
+    .section-1-img {
+      height: 100%;
+    }
+
+    .section-1-li-styled {
+      text-align: justify;
+    }
+  }
+}
+
+//ANIMATIONS ============================================
+
+@keyframes menuIn {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes opacityIn {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
