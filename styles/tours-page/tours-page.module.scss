@@ -251,11 +251,15 @@
 }
 
 .section-6 {
-  margin: 2rem 0;
+  margin: 10rem 0;
 
-  .section-6-h1 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  .section-6-h2 {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+    
+  }
+  .section-6-h3{
+    font-size: 1rem;
   }
 
   .section-6-item-wrapper {
@@ -279,9 +283,7 @@
     border-bottom-left-radius: 0.3rem;
   }
 
-  .section-6-h2 {
-    font-size: 1rem;
-  }
+
 
   .section-6-a {
     text-decoration: none;
@@ -860,7 +862,7 @@
     }
   }
   .section-6 {
-    margin: 2rem 0;
+    margin: 8rem 0;
 
     .section-6-h1 {
       font-size: 1.5rem;
@@ -891,11 +893,13 @@
 
     .section-6-h2 {
       font-size: 1rem;
+      margin-bottom: 5rem;
     }
 
     .section-6-a {
       text-decoration: none;
       color: $third-color;
+      // margin-right: .5rem;
     }
   }
 
