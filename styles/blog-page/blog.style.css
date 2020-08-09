@@ -23,6 +23,10 @@ body {
   width: 60%;
 }
 
+.footer-inner {
+  width: 85vw;
+}
+
 .inner-large {
   width: 85%;
 }
