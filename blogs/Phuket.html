@@ -12,6 +12,7 @@
   />
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Таиланд Пхукет, авиаперелет, отели и пляжи Пхукета, как добраться до острова</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
      <!-- Yandex.Metrika counter -->
      <script defer type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -348,8 +349,25 @@
                 </a>
             </div>
         </section>
-        <!-- <section class="center">
+        <section class="center">
             <div class="inner">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                <script>
+                function onSignIn(googleUser) {
+                    // Useful data for your client-side scripts:
+                    var profile = googleUser.getBasicProfile();
+                    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                    console.log('Full Name: ' + profile.getName());
+                    console.log('Given Name: ' + profile.getGivenName());
+                    console.log('Family Name: ' + profile.getFamilyName());
+                    console.log("Image URL: " + profile.getImageUrl());
+                    console.log("Email: " + profile.getEmail());
+
+                    // The ID token you need to pass to your backend:
+                    var id_token = googleUser.getAuthResponse().id_token;
+                    console.log("ID Token: " + id_token);
+                }
+                </script>
                 <div class="comment-container">
                     <div class="comment-container-upper">
                         <p class="comment-name">Andrew Pinon</p>
@@ -393,7 +411,7 @@
                    </div>
                </form>
             </div>
-        </section> -->
+        </section>
         
         <footer class="center footer">
             <div class="inner footer-inner">
