@@ -179,23 +179,23 @@ header {
 }
 .footer {
   background: #f1f2f8;
-  height: 30vh;
+  height: auto;
   .footer-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 1rem 0;
+    padding: 2rem 0;
     
     .footer-col-1{
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: flex-start;
     }
     
     .footer-col-2{
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
     }
   }
@@ -224,6 +224,9 @@ header {
       // font-weight: 200;
       color: #cdced3;
     }
+  }
+  .footer-h2{
+    font-size: 1rem;
   }
   
   .link-h5 {
