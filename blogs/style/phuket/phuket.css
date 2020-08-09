@@ -20,6 +20,10 @@
   width: 50%;
 }
 
+.footer-inner {
+  width: 60vw;
+}
+
 .justify-wrapper {
   text-align: justify;
 }
@@ -313,7 +317,7 @@ header .header-p {
 }
 
 .footer .footer-align-container .footer-h4 {
-  text-align: justify;
+  text-align: center;
   color: #cdced3;
 }
 

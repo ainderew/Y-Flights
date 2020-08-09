@@ -18,6 +18,10 @@
   width: 50%;
 }
 
+.footer-inner{
+  width: 60vw;
+}
+
 .justify-wrapper {
   text-align: justify;
 }
@@ -238,7 +242,7 @@ header {
     width: 70%;
     margin: 1rem 0;
     .footer-h4 {
-      text-align: justify;
+      text-align: center;
       // font-weight: 200;
       color: #cdced3;
     }
