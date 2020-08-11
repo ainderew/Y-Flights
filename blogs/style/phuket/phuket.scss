@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 // COMMON CLASSES
 // =============================================================================================
@@ -270,6 +271,12 @@ header {
   }
 }
 
+
+// COMMENTS STYLES ======================
+.replyInputContainer{
+  margin-left: 5rem;
+}
+
 .comment-form {
   display: flex;
   flex-direction: column;
@@ -280,10 +287,10 @@ header {
 
   .comment-label {
     color: #000;
+    margin-bottom: 1rem;
   }
 
   #comment-input-form {
-    margin-top: 1rem;
     border: none;
     outline: none;
   }
@@ -311,7 +318,7 @@ header {
   margin-bottom: 1rem;
 
   display: grid;
-  grid-template-rows: 3.5rem auto;
+  grid-template-rows: 3.5rem auto auto;
 
   background: #f1f2f8;
   position: relative;
@@ -329,7 +336,7 @@ header {
   }
 
   .comment-container-lower {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem  1rem;
 
     .comment-reply-btn {
       position: absolute;
@@ -366,6 +373,29 @@ header {
     margin-left: 5rem;
   }
 }
+
+
+.comment-row{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.comment-input-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.comment-input{
+  border: none;
+}
+
+.comment-input-name{
+  margin-right: 2rem;
+}
+// END OF COMMENT STYLES ========================================
+
+
 
 @media only screen and (min-width: 1800px) {
   .section-1 {
@@ -564,6 +594,14 @@ header {
     .section-1-li-styled {
       text-align: justify;
     }
+  }
+  .comment-row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .comment-input-name{
+    margin-right: 0;
   }
 }
 

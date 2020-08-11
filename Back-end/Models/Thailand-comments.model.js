@@ -14,5 +14,5 @@ const comment = new Schema({
     minute: String,
 })
 
-const CommentSchema = mongoose.model("Comment", comment)
-module.exports = CommentSchema;
+const ThailandCommentSchema = mongoose.model("ThailandComment", comment)
+module.exports = ThailandCommentSchema;

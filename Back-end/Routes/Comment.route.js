@@ -1,38 +1,91 @@
 const express = require("express");
 const router = express.Router();
-const CommentSchema = require("../Models/comments.model");
+const PhuketCommentSchema = require("../Models/Phuket-comments.model");
+const ArticleCommentSchema = require("../Models/Article-1-comments.model");
+const BangkokCommentSchema = require("../Models/Bangkok-comments.model");
+const ThailandCommentSchema = require("../Models/Thailand-comments.model");
 
 
-router.post("/postComment", (req, res) => {
-  // const year = getYear()
-  // const month = getMonth()
-  // const Day = getDay()
+// PHUKET POST COMMENT ROUTE
+router.post("/PhuketPostComment", (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, PhuketCommentSchema)
 
-  try {
-        const { name, email, comment } = req.body;
-
-        const comment = new CommentSchema({
-        name: name,
-        email: email,
-        year: getYear(),
-        month: getMonth(),
-        day: getDay(),
-        comment: comment,
-        replies: [],
-        hour: getHour(),
-        minute: getMinute(),
-        });
-        comment.save();
-        res.json("successful");
-        
-  } catch (err) {
-        res.json(err)
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
   }
+  
+});
+// THAILAND POST COMMENT ROUTE
+router.post("/PhuketPostComment", (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, ThailandCommentSchema)
+
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
 });
 
-router.get("/getComments", (req, res) => {
-    CommentSchema.find()
+// ARTICLE-1 POST COMMENT ROUTE
+router.post("/PhuketPostComment", (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, ArticleCommentSchema)
+
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
 });
+
+// BANGKOK POST COMMENT ROUTE
+router.post("/PhuketPostComment", (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, BangkokCommentSchema)
+
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
+});
+
+
+
+
+
+
+
+
+// FUNCTIONS = = = = = = = = = = = = = = = = = 
+const commentHandler = (name, email, comment, schema) =>{
+  try {
+    const commentPost = new schema({
+    name: name,
+    email: email,
+    year: getYear(),
+    month: getMonth(),
+    day: getDay(),
+    comment: comment,
+    hour: getHour(),
+    minute: getMinute(),
+    });
+
+    commentPost.save();
+    return true
+
+  } catch (err) {
+      return err
+  }
+}
+
 
 const getYear = () => {
   const initDate = new Date();
@@ -83,5 +136,13 @@ const getHour = () => {
 };
 const getMinute = () => {
   const initDate = new Date();
-  return initDate.getMinutes();
+  const minute = initDate.getMinutes()
+  if (minute === 0){
+    minute = 00
+  }
+  
+  return minute;
 };
+
+
+module.exports = router;

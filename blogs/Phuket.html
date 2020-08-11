@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Основные достопримечательности Пхукета. Фото, погода, отели, кухня.
     Недорогие туры на Пхукет от сервиса Y-Flights.com">
-    <meta name="google-signin-client_id" content="974741283536-sqvt8f5fl7jmnp9b0pffr5b372gh9fv8.apps.googleusercontent.com">
     <link rel="stylesheet" href="./style/phuket/phuket.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -350,25 +349,9 @@
                 </a>
             </div>
         </section>
-        <section class="center">
-            <div class="inner">
-                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <script>
-                function onSignIn(googleUser) {
-                    // Useful data for your client-side scripts:
-                    var profile = googleUser.getBasicProfile();
-                    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-                    console.log('Full Name: ' + profile.getName());
-                    console.log('Given Name: ' + profile.getGivenName());
-                    console.log('Family Name: ' + profile.getFamilyName());
-                    console.log("Image URL: " + profile.getImageUrl());
-                    console.log("Email: " + profile.getEmail());
 
-                    // The ID token you need to pass to your backend:
-                    var id_token = googleUser.getAuthResponse().id_token;
-                    console.log("ID Token: " + id_token);
-                }
-                </script>
+        <section class="comment-section center">
+            <div class="comment-section-inner inner">
                 
                 <div class="comment-container">
                     <div class="comment-container-upper">
@@ -383,6 +366,10 @@
                         <button class="comment-reply-btn">Reply</button>
                         <button class="comment-show-reply-btn">Show Replies</button>
                     </div>
+                </div>
+
+                <div class="replyInputContainer">
+                    
                 </div>
                 
                 <ul class="comment-replies-ul">
@@ -402,20 +389,36 @@
                         </div>
                     </li>
                 </ul>
-                
-               
-                
-               <form action="" class="comment-form">
+            </div>
+        </section>
+
+        <section class="center"  id="commentBox">
+            <div class="inner">
+               <form class="comment-form">
+                   <div class="comment-row">
+                       <div class="comment-input-container">
+                            <label for="Name" class="comment-label">Name</label>
+                            <input required type="text" class="comment-input comment-input-name">
+                       </div>
+
+                       <div class="comment-input-container">
+                           <label for="" class="comment-label">Email</label>
+                           <input required type="text" class="comment-input comment-input-email">
+                       </div>
+                   </div>
+                   
+
                    <label for="comment" class="comment-label">Post a comment</label>
-                   <textarea name="comment" id="comment-input-form" cols="30" rows="5"></textarea>
+                   <textarea required name="comment" id="comment-input-form" cols="30" rows="5"></textarea>
                    <div class="comment-btn-container">
-                       <button class="comment-btn">Submit</button>
+                       <button onclick="submitComment(event)" type="submit" class="comment-btn">Submit</button>
                    </div>
                </form>
             </div>
         </section>
-        
-        <footer class="center footer">
+
+<!-- ---------------------------FOOTER ---------------------------------------------- -->
+        <footer class="center footer ">
             <div class="inner footer-inner">
               <div class="footer-col-1">
                 <h2 class="footer-h2">Обзоры популярных направлений</h2>
@@ -483,7 +486,8 @@
             </div>
         </footer>
        
-    <!-- end www.htmlcommentbox.com -->
+   <script src="../scripts/blogs/Phuket.js"></script>
+
     <script>
         const burgerBtn = document.querySelector(".burger-menu");
         const phoneMenu = document.querySelector(".phone-menu")
