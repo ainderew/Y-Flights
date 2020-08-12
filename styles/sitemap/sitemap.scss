@@ -193,6 +193,7 @@ header {
   background: #f1f2f8;
   height: auto;
   .footer-inner {
+    width: 85vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem 0;
