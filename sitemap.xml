@@ -6,35 +6,46 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
+
 <url>
   <loc>https://www.y-flights.com/</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/tours</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/flightticket</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/phuket</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/thailand</loc>
-  <lastmod>2020-08-04T04:43:41+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.y-flights.com/blogs/bangkok</loc>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.y-flights.com/sitemap</loc>
+  <lastmod>2020-08-12T13:46:22+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
