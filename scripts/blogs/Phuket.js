@@ -1,6 +1,7 @@
 console.log("script loaded");
 let commentsArray = [];
-let currentReplyOpen;
+let globalRepliesArray = []
+let currentReplyOpen = false;
 
 
 const submitComment = async (event) => {
@@ -29,6 +30,9 @@ const submitComment = async (event) => {
 };
 
 
+
+//RENDERING COMMENTS
+
 const renderComments = async () => {
   const endpoint = "http://localhost:5000/getComments/PhuketComments";
   await fetch(endpoint, {
@@ -36,25 +40,25 @@ const renderComments = async () => {
     mode: "cors",
   })
     .then((response) => response.json())
-    .then((data) =>
-      data.forEach((el) => {
-        commentsArray = data;
+    .then((data) => {
+      commentsArray = data;
+      data.forEach((el,index) => {
         createHTMLComponent(el);
+        getReplies(el.replies,index)
       })
+    }
     );
+    
+  
+    
   addReplyButtonListener();
 };
 
-const createHTMLComponent = ({
-  name,
-  email,
-  comment,
-  year,
-  month,
-  day,
-  hour,
-  minute,
-}) => {
+
+
+
+//CREATES HTML TO RENDER
+const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,}) => {
   const commentDiv = document.querySelector(".comment-section-inner");
   const div = document.createElement("div");
 
@@ -69,10 +73,54 @@ const createHTMLComponent = ({
           ${comment}
       </p>
       <button class="comment-reply-btn">Reply</button>
-      <button class="comment-show-reply-btn">Show Replies</button>
+     
     </div>`;
   commentDiv.appendChild(div);
 };
+
+//FETCHES REPLY 
+const getReplies =  (repliesArray,indexOfComment) =>{
+  repliesArray.forEach(async (el,index) => {
+    const replyId = {
+      replyId:el
+    }
+    
+    const endpoint = "http://localhost:5000/getComments/PhuketReplies"
+    await fetch(endpoint,{
+    mode: "cors",
+    method: "POST",
+    headers: {
+      "Content-Type": "Application/json"
+    },
+    body: JSON.stringify(replyId)
+  })
+  .then(response => response.json())
+  .then(data => (renderReply(data,indexOfComment)))
+  })
+  
+}
+
+const renderReply = ({name,month,day,year,hour,minute,comment},indexOfComment) =>{
+  const currentComment = document.querySelectorAll(".comment-container");
+  const reply = document.createElement("div");
+  
+  reply.className = "reply-container";
+  reply.innerHTML = `
+        <div class="comment-container-upper">
+          <p class="comment-name">${name}</p>
+          <p class="comment-date">${month} ${day}, ${year} at ${hour}:${minute}</p>
+        </div>
+
+        <div class="comment-container-lower">
+          <p class="comment-text justify-wrapper">
+              ${comment}
+          </p>
+          
+        </div>`;
+  
+  
+  currentComment[indexOfComment].parentNode.insertBefore(reply, currentComment[indexOfComment].nextSibling);
+}
 
 const addReplyButtonListener = () => {
   const replyBtn = document.querySelectorAll(".comment-reply-btn");
@@ -84,6 +132,7 @@ const addReplyButtonListener = () => {
   });
 };
 
+
 const onReply = (index) => {
   const commentContainer = document.querySelectorAll(".comment-container");
   const replyInput = document.createElement("div");
@@ -92,32 +141,75 @@ const onReply = (index) => {
           <div class="comment-row">
               <div class="comment-input-container">
                   <label for="Name" class="comment-label">Name</label>
-                  <input required type="text" class="comment-input comment-input-name">
+                  <input required id="reply-input-name" type="text" class="comment-input comment-input-name">
               </div>
 
               <div class="comment-input-container">
                   <label for="" class="comment-label">Email</label>
-                  <input required type="text" class="comment-input comment-input-email">
+                  <input required id="reply-input-email" type="text" class="comment-input comment-input-email">
               </div>
           </div>
           
 
           <label for="comment" class="comment-label">Leave a reply</label>
-          <textarea required name="comment" id="comment-input-form" cols="30" rows="5"></textarea>
+          <textarea required name="comment" id="reply-input-comment" cols="30" rows="5"></textarea>
           <div class="comment-btn-container">
-              <button onclick="submitComment(event)" type="submit" class="comment-btn">Submit</button>
+              <button type="submit" id="submit-reply-btn" class="comment-btn">Submit</button>
           </div>
         </form>`;
-  removeReplyInputs()
+  
+        
+  if (currentReplyOpen){
+    removeReplyInputs()
+  }
   commentContainer[index].parentNode.insertBefore(replyInput, commentContainer[index].nextSibling);
-
+  currentReplyOpen = true;
+  AddListenerSendReply(index)
+  
   console.log(commentsArray[index]);
 };
 
-const removeReplyInputs = () =>{
-  const replyInputContainer = document.querySelectorAll(".replyInputContainer");
+const AddListenerSendReply = (index) =>{
+  const submitReplyBtn = document.getElementById("submit-reply-btn");
+  
+  submitReplyBtn.addEventListener("click", (event) =>{
+    submitReply(event,commentsArray[index]._id)
+  })
+}
 
-  replyInputContainer.foreach(el => el.remove())
+//CLOSES ANY OPEN REPLY INPUT FORMS TO REMOVE DUPLICATES
+const removeReplyInputs = () =>{
+  const replyInputContainer = document.querySelector(".replyInputContainer");
+  replyInputContainer.remove()
+}
+
+//FUNCTION THAT DEALS WITH REPLIES BEING SENT
+const submitReply = async (event,commentId) =>{
+  event.preventDefault();
+  const name = document.getElementById("reply-input-name");
+  const email = document.getElementById("reply-input-email");
+  const comment = document.getElementById("reply-input-comment");
+  
+  const endpoint = "http://localhost:5000/comments/PhuketPostReply"
+  
+  const replyObj = {
+    name: name.value,
+    email: email.value,
+    comment: comment.value,
+    commentId: commentId
+  }
+  
+  
+  await fetch(endpoint,{
+    mode: "cors",
+    method: "POST",
+    headers: {
+      "Content-Type": "Application/json"
+    },
+    body: JSON.stringify(replyObj)
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
 }
 
 renderComments();

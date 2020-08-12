@@ -273,8 +273,14 @@ header {
 
 
 // COMMENTS STYLES ======================
+.comment-section-h4{
+  margin-bottom: -4rem;
+}
+
+//FOR THE REPLY INPUT FORM INDENT
 .replyInputContainer{
   margin-left: 5rem;
+  animation: 300ms opacityIn forwards linear;
 }
 
 .comment-form {
@@ -290,10 +296,13 @@ header {
     margin-bottom: 1rem;
   }
 
-  #comment-input-form {
+  #comment-input-form,
+  #reply-input-comment{
     border: none;
     outline: none;
   }
+  
+  
 
   .comment-btn-container {
     width: 100%;
@@ -311,7 +320,8 @@ header {
   }
 }
 
-.comment-container {
+.comment-container,
+.reply-container{
   width: 100%;
   min-height: 10rem;
   padding: 1rem;
@@ -365,6 +375,14 @@ header {
       outline: none;
     }
   }
+}
+
+.comment-container{
+  margin-top: 5rem;
+}
+.reply-container{
+  margin-left: 5rem;
+  width: calc( 100% - 5rem)
 }
 
 .comment-replies-ul {
@@ -611,5 +629,14 @@ header {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
   }
 }

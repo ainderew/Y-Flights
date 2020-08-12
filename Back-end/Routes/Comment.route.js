@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 const PhuketCommentSchema = require("../Models/Phuket-comments.model");
 const ArticleCommentSchema = require("../Models/Article-1-comments.model");
 const BangkokCommentSchema = require("../Models/Bangkok-comments.model");
 const ThailandCommentSchema = require("../Models/Thailand-comments.model");
+//REPLY SCHEMA
+const ReplySchema = require("../Models/reply.model");
 
 
 // PHUKET POST COMMENT ROUTE
@@ -18,6 +21,20 @@ router.post("/PhuketPostComment", (req, res) => {
   }
   
 });
+
+router.post("/PhuketPostReply", (req,res) => {
+  const {name, email, comment, commentId} = req.body;
+  const generatedId = mongoose.Types.ObjectId();
+  const status = replyHandler(name, email, comment, commentId, ReplySchema, generatedId, PhuketCommentSchema)
+  // console.log(req.body)
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+})
+
+
 // THAILAND POST COMMENT ROUTE
 router.post("/PhuketPostComment", (req, res) => {
   const { name, email, comment } = req.body;
@@ -86,6 +103,30 @@ const commentHandler = (name, email, comment, schema) =>{
   }
 }
 
+const replyHandler = async (name, email, comment, commentId, schema, generatedId, originSchema) =>{
+  console.log(generatedId);
+  console.log(originSchema);
+  try {
+    const reply = new schema({
+    _id: generatedId,
+    name: name,
+    email: email,
+    year: getYear(),
+    month: getMonth(),
+    day: getDay(),
+    comment: comment,
+    hour: getHour(),
+    minute: getMinute(),
+    });
+
+    reply.save();
+    await originSchema.updateOne({_id: commentId}, {$push: {replies:generatedId}})
+    return true
+
+  } catch (err) {
+      return err
+  }
+}
 
 const getYear = () => {
   const initDate = new Date();
