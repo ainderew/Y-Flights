@@ -68,6 +68,7 @@
 
 // ------------------------------------------------------------------------------------------
 
+
 header {
   width: 100%;
   height: 80vh;
@@ -283,6 +284,11 @@ header {
   animation: 300ms opacityIn forwards linear;
 }
 
+.comment-section-inner{
+  // width: 100%;
+  min-height: 50vh;
+  position: relative;
+}
 .comment-form {
   display: flex;
   flex-direction: column;
@@ -641,3 +647,38 @@ header {
     opacity: 100%;
   }
 }
+
+// LOADING CSS
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(8, 7, 37);
+  border-color: rgb(8, 7, 37) transparent rgb(8, 7, 37) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+// LOADING CSS

@@ -21,6 +21,9 @@ const submitComment = async (event) => {
     email: commentorEmail.value,
     comment: comment.value,
   };
+  
+  clearCommentsDiv()
+  renderLoadingIndicator()
 
   await fetch(endpoint, {
     mode: "cors",
@@ -209,8 +212,8 @@ const submitReply = async (event,commentId) =>{
     comment: comment.value,
     commentId: commentId
   }
-  
-  
+  clearCommentsDiv()
+  renderLoadingIndicator()
   await fetch(endpoint,{
     mode: "cors",
     method: "POST",
@@ -224,9 +227,13 @@ const submitReply = async (event,commentId) =>{
     if (data === "successful"){
       clearCommentsDiv()
       renderComments()
-      removeReplyInputs()
     }
   })
+}
+
+const renderLoadingIndicator = () =>{
+  const commentDiv = document.querySelector(".comment-section-inner");
+  commentDiv.innerHTML = `<div class="lds-dual-ring"></div>`
 }
 
 renderComments();
