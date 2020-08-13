@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 const fs = require("fs")
 const https = require("https")
 var options = {
-  key: fs.readFileSync("./server-key.pem"),
-  cert: fs.readFileSync('./server-cert.pem'),
+  // key: fs.readFileSync("./"),
+  cert: fs.readFileSync('./certificate.crt'),
 };
 
 require("dotenv").config();
