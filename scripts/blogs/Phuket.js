@@ -26,7 +26,11 @@ const submitComment = async (event) => {
     body: JSON.stringify(bodyObject),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      if (data === "successful"){
+        window.reload()
+      }
+    });
 };
 
 
