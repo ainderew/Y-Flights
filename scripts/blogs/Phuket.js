@@ -3,6 +3,11 @@ let commentsArray = [];
 let globalRepliesArray = []
 let currentReplyOpen = false;
 
+const clearCommentsDiv = () =>{
+  const commentDiv = document.querySelector(".comment-section-inner");
+  commentDiv.innerHTML = ""
+}
+
 
 const submitComment = async (event) => {
   event.preventDefault();
@@ -28,7 +33,8 @@ const submitComment = async (event) => {
     .then((response) => response.json())
     .then((data) => {
       if (data === "successful"){
-        location.reload()
+        clearCommentsDiv()
+        renderComments()
       }
     });
 };
@@ -184,6 +190,7 @@ const AddListenerSendReply = (index) =>{
 //CLOSES ANY OPEN REPLY INPUT FORMS TO REMOVE DUPLICATES
 const removeReplyInputs = () =>{
   const replyInputContainer = document.querySelector(".replyInputContainer");
+  console.log("removed")
   replyInputContainer.remove()
 }
 
@@ -215,7 +222,9 @@ const submitReply = async (event,commentId) =>{
   .then(response => response.json())
   .then(data => {
     if (data === "successful"){
-      location.reload();
+      clearCommentsDiv()
+      renderComments()
+      removeReplyInputs()
     }
   })
 }
