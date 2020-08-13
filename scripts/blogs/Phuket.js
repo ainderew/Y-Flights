@@ -28,7 +28,7 @@ const submitComment = async (event) => {
     .then((response) => response.json())
     .then((data) => {
       if (data === "successful"){
-        window.reload()
+        location.reload()
       }
     });
 };
