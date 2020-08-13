@@ -9,7 +9,7 @@ const submitComment = async (event) => {
   const commentorName = document.querySelector(".comment-input-name");
   const commentorEmail = document.querySelector(".comment-input-email");
   const comment = document.getElementById("comment-input-form");
-  const endpoint = "http://localhost:5000/comments/PhuketPostComment";
+  const endpoint = "http://18.219.206.37:5000/comments/PhuketPostComment";
 
   const bodyObject = {
     name: commentorName.value,
@@ -34,7 +34,7 @@ const submitComment = async (event) => {
 //RENDERING COMMENTS
 
 const renderComments = async () => {
-  const endpoint = "http://localhost:5000/getComments/PhuketComments";
+  const endpoint = "http://18.219.206.37:5000/getComments/PhuketComments";
   await fetch(endpoint, {
     method: "GET",
     mode: "cors",
@@ -85,7 +85,7 @@ const getReplies =  (repliesArray,indexOfComment) =>{
       replyId:el
     }
     
-    const endpoint = "http://localhost:5000/getComments/PhuketReplies"
+    const endpoint = "http://18.219.206.37:5000/getComments/PhuketReplies"
     await fetch(endpoint,{
     mode: "cors",
     method: "POST",
@@ -190,7 +190,7 @@ const submitReply = async (event,commentId) =>{
   const email = document.getElementById("reply-input-email");
   const comment = document.getElementById("reply-input-comment");
   
-  const endpoint = "http://localhost:5000/comments/PhuketPostReply"
+  const endpoint = "http://18.219.206.37:5000/comments/PhuketPostReply"
   
   const replyObj = {
     name: name.value,
