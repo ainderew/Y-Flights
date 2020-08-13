@@ -20,13 +20,15 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-// app.listen(PORT, () => {
-//   console.log(`using port: ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`using port: ${PORT}`);
+});
+
+// const server = https.createServer(options, app).listen(PORT, function(){
+//   console.log("Express server listening on port " + PORT);
 // });
 
-const server = https.createServer(options, app).listen(PORT, function(){
-  console.log("Express server listening on port " + PORT);
-});
+
 //CONNECT TO MONGODB ATLAS
 mongoose.connect(`mongodb+srv://andrewapinon:${process.env.MONGODB_PASSWORD}@yflights.hs835.mongodb.net/YFlight`, { useNewUrlParser: true, useUnifiedTopology: true }, () =>{
   console.log("Connected to DB")
