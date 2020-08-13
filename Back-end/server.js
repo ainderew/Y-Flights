@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 require("dotenv").config();
 
 // START =============================================================================================================
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
