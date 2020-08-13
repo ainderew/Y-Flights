@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const fs = require("fs")
 const https = require("https")
 var options = {
-  // key: fs.readFileSync("./"),
+  key: fs.readFileSync("./"),
   cert: fs.readFileSync('./certificate.crt'),
 };
 
