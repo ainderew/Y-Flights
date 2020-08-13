@@ -213,7 +213,11 @@ const submitReply = async (event,commentId) =>{
     body: JSON.stringify(replyObj)
   })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+    if (data === "successful"){
+      location.reload();
+    }
+  })
 }
 
 renderComments();

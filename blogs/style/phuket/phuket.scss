@@ -332,6 +332,7 @@ header {
 
   background: #f1f2f8;
   position: relative;
+  animation: 300ms opacityIn forwards linear;
 
   .comment-container-upper {
     border-bottom: grey 1px solid;
