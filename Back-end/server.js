@@ -7,8 +7,8 @@ const fs = require("fs")
 const https = require("https")
 
 var options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/y-flights.com/privkey.pem"),
-  cert: fs.readFileSync('/etc/letsencrypt/live/y-flights.com/fullchain.pem'),
+  key: fs.readFileSync("./private.key"),
+  cert: fs.readFileSync("./certificate.crt"),
 };
 
 require("dotenv").config();
