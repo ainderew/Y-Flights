@@ -8,6 +8,9 @@ const clearCommentsDiv = () =>{
   commentDiv.innerHTML = ""
 }
 
+const resetReplyOpen = () =>{
+  currentReplyOpen = false
+}
 
 const submitComment = async (event) => {
   event.preventDefault();
@@ -38,6 +41,7 @@ const submitComment = async (event) => {
       if (data === "successful"){
         clearCommentsDiv()
         renderComments()
+        resetReplyOpen()
       }
     });
 };
@@ -214,6 +218,7 @@ const submitReply = async (event,commentId) =>{
   }
   clearCommentsDiv()
   renderLoadingIndicator()
+  
   await fetch(endpoint,{
     mode: "cors",
     method: "POST",
@@ -227,6 +232,7 @@ const submitReply = async (event,commentId) =>{
     if (data === "successful"){
       clearCommentsDiv()
       renderComments()
+      resetReplyOpen()
     }
   })
 }
