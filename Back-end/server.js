@@ -37,7 +37,7 @@ mongoose.connect(`mongodb+srv://andrewapinon:${process.env.MONGODB_PASSWORD}@yfl
 
 
 app.get("/", (req,res) => {
-    res.send("SERVER WORKING")
+    res.send("SERVER WORKING!!")
 })
 
 
