@@ -20,6 +20,7 @@ const resetReplyOpen = () =>{
 const submitComment = async (event) => {
   event.preventDefault();
   repliesArrayCtr = [];
+  
   const commentDiv = document.querySelector(".comment-section-inner");
   const commentorName = document.querySelector(".comment-input-name");
   const commentorEmail = document.querySelector(".comment-input-email");
@@ -50,6 +51,7 @@ const submitComment = async (event) => {
         clearCommentsDiv()
         renderComments()
         resetReplyOpen()
+        comment.innerHTML = "";
       }
     });
 };
