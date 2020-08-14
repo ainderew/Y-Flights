@@ -5,7 +5,7 @@
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-rendering: optimizeLegibility;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 .center {
@@ -349,6 +349,10 @@ header .header-p {
 
 .comment-section-h4 {
   margin-bottom: -4rem;
+}
+
+.replied-to-name {
+  color: #0770E7;
 }
 
 .replyInputContainer {
