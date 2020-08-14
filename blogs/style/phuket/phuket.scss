@@ -636,6 +636,10 @@ header {
   }
 }
 
+.replyInputContainer{
+  margin-left: 0;
+}
+
 @keyframes menuIn {
   0% {
     transform: translateY(-100vh);
