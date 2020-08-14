@@ -4,7 +4,8 @@ const endpointURL = "https://y-flights.herokuapp.com/"
 let commentsArray = [];
 let globalRepliesArray = []
 let currentReplyOpen = false;
-let repliesArrayCtr;
+let repliesArrayCtr = [];
+let commentsCtr;
 
 const clearCommentsDiv = () =>{
   const commentDiv = document.querySelector(".comment-section-inner");
@@ -18,11 +19,14 @@ const resetReplyOpen = () =>{
 //HANDLES SUBMISSION OF COMMENT
 const submitComment = async (event) => {
   event.preventDefault();
+  repliesArrayCtr = [];
+  const commentDiv = document.querySelector(".comment-section-inner");
   const commentorName = document.querySelector(".comment-input-name");
   const commentorEmail = document.querySelector(".comment-input-email");
   const comment = document.getElementById("comment-input-form");
   const endpoint = `${endpointURL}comments/PhuketPostComment`;
 
+  commentDiv.scrollIntoView({block: "center"});
   const bodyObject = {
     name: commentorName.value,
     email: commentorEmail.value,
@@ -55,6 +59,7 @@ const submitComment = async (event) => {
 //RENDERING COMMENTS
 
 const renderComments = async () => {
+  repliesArrayCtr = []
   const endpoint = `${endpointURL}getComments/PhuketComments`;
   await fetch(endpoint, {
     method: "GET",
@@ -63,8 +68,14 @@ const renderComments = async () => {
     .then((response) => response.json())
     .then((data) => {
       commentsArray = data;
-      data.forEach((el,index) => {
-        createHTMLComponent(el);
+      commentsCtr = commentsArray.length
+      // for(let i = 0; i<commentsArray.length; i++){
+      //   createHTMLComponent(commentsArray[i],i);
+      //   getReplies(commentsArray[i].replies,i)
+      // }
+      commentsArray.forEach((el,index) => {
+        globalRepliesArray.push([])
+        createHTMLComponent(el,index);
         getReplies(el.replies,index)
       })
     }
@@ -72,24 +83,24 @@ const renderComments = async () => {
     
   
     
-  addReplyButtonListener();
+  // addReplyButtonListener();
 };
 
 
-const addReplyButtonListener = () => {
-  const replyBtn = document.querySelectorAll(".comment-reply-btn");
+// const addReplyButtonListener = () => {
+//   const replyBtn = document.querySelectorAll(".comment-reply-btn");
 
-  replyBtn.forEach((el, index) => {
-    el.addEventListener("click", () => {
-      onReply(index);
-    });
-  });
-};
+//   replyBtn.forEach((el, index) => {
+//     el.addEventListener("click", () => {
+//       onReply(index);
+//     });
+//   });
+// };
 
 
 
 //CREATES HTML TO RENDER
-const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,}) => {
+const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,},indexOfComment) => {
   const commentDiv = document.querySelector(".comment-section-inner");
   const div = document.createElement("div");
 
@@ -103,7 +114,7 @@ const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,}) =
       <p class="comment-text justify-wrapper">
           ${comment}
       </p>
-      <button class="comment-reply-btn">Reply</button>
+      <button onclick="onReply(${indexOfComment}, '${name}')" class="comment-reply-btn">Reply</button>
      
     </div>`;
   commentDiv.appendChild(div);
@@ -111,8 +122,11 @@ const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,}) =
 
 //FETCHES REPLY 
 const getReplies =  async (repliesArray,indexOfComment) =>{
-  repliesArrayCtr = repliesArray.length
+  repliesArrayCtr.push(repliesArray.length)
   
+  console.log(repliesArrayCtr)
+  console.log("I GOT CALLED")
+  console.log(repliesArrayCtr[indexOfComment])
 
     repliesArray.forEach(async (el,index) => {
       const replyId = {
@@ -130,11 +144,11 @@ const getReplies =  async (repliesArray,indexOfComment) =>{
     })
     .then(response => response.json())
     .then(data => {
-        globalRepliesArray.push(data)
-        repliesArrayCtr -= 1;
-        console.log(repliesArrayCtr)
-        if(repliesArrayCtr === 0){
-          arrangeAndDisplayReplies()
+        globalRepliesArray[indexOfComment].push(data)
+        repliesArrayCtr[indexOfComment] -= 1;
+        console.log(repliesArrayCtr[indexOfComment])
+        if(repliesArrayCtr[indexOfComment] === 0){
+          arrangeAndDisplayReplies(indexOfComment)
         }
       })
     })
@@ -143,13 +157,16 @@ const getReplies =  async (repliesArray,indexOfComment) =>{
   
 
 
-    const arrangeAndDisplayReplies = () =>{
-      globalRepliesArray.sort((a,b) => b.replyIndex - a.replyIndex)
-      globalRepliesArray.forEach((el,index) =>{
-        renderReply(el,indexOfComment,el.replyIndex)
+    const arrangeAndDisplayReplies = (currentIndex) =>{
+      console.log("RANA")
+      globalRepliesArray[currentIndex].sort((a,b) => b.replyIndex - a.replyIndex)
+      globalRepliesArray[currentIndex].forEach((el,index) =>{
+        renderReply(el,currentIndex,el.replyIndex)
       })
       console.log( globalRepliesArray )
-      globalRepliesArray = []
+      // globalRepliesArray = []
+      repliesArrayCtr.unshift()
+      
     }
 
 }
@@ -158,7 +175,7 @@ const renderReply = ({name, repliedToName, month,day,year,hour,minute,comment},i
   const currentComment = document.querySelectorAll(".comment-container");
   const reply = document.createElement("div");
   
-  reply.className = "reply-container";
+  reply.className = `reply-container reply${indexOfReply}`;
   reply.innerHTML = `
         <div class="comment-container-upper">
           <p class="comment-name" id="${indexOfReply}">${name}</p>
@@ -184,8 +201,8 @@ const scrollToRepliedComment = (indexOfReply) =>{
 }
 
 const onSubReply = (indexOfReply, indexOfComment, nameOfRepliedToComment) => {
-  console.log(indexOfReply)
-  const ReplyContainer = document.querySelectorAll(".reply-container");
+  console.log("reply-"+indexOfReply)
+  const ReplyContainer = document.querySelector(`.reply${indexOfReply }`);
   const replyInput = document.createElement("div");
   replyInput.className = "replyInputContainer";
   replyInput.innerHTML = `<form class="comment-form">
@@ -213,7 +230,7 @@ const onSubReply = (indexOfReply, indexOfComment, nameOfRepliedToComment) => {
   if (currentReplyOpen){
     removeReplyInputs()
   }
-  ReplyContainer[indexOfReply].parentNode.insertBefore(replyInput, ReplyContainer[indexOfReply].nextSibling);
+  ReplyContainer.parentNode.insertBefore(replyInput, ReplyContainer.nextSibling);
   currentReplyOpen = true;
   AddListenerSendReply(indexOfComment,nameOfRepliedToComment)
   
@@ -224,7 +241,7 @@ const onSubReply = (indexOfReply, indexOfComment, nameOfRepliedToComment) => {
 
 
 
-const onReply = (index) => {
+const onReply = (index,nameOfRepliedToComment) => {
   const commentContainer = document.querySelectorAll(".comment-container");
   const replyInput = document.createElement("div");
   replyInput.className = "replyInputContainer";
@@ -243,7 +260,7 @@ const onReply = (index) => {
           
 
           <label for="comment" class="comment-label">Leave a reply</label>
-          <textarea required name="comment" id="reply-input-comment" cols="30" rows="5"></textarea>
+          <textarea required  placeholder="@${nameOfRepliedToComment}" name="comment" id="reply-input-comment" cols="30" rows="5"></textarea>
           <div class="comment-btn-container">
               <button type="submit" id="submit-reply-btn" class="comment-btn">Submit</button>
           </div>
@@ -255,7 +272,7 @@ const onReply = (index) => {
   }
   commentContainer[index].parentNode.insertBefore(replyInput, commentContainer[index].nextSibling);
   currentReplyOpen = true;
-  AddListenerSendReply(index)
+  AddListenerSendReply(index,nameOfRepliedToComment)
   
   console.log(commentsArray[index]);
 };
@@ -280,6 +297,8 @@ const removeReplyInputs = () =>{
 //FUNCTION THAT DEALS WITH REPLIES BEING SENT
 const submitReply = async (event,commentId,repliedToName) =>{
   event.preventDefault();
+  globalRepliesArray = []
+  repliesArrayCtr = []
   const name = document.getElementById("reply-input-name");
   const email = document.getElementById("reply-input-email");
   const comment = document.getElementById("reply-input-comment");
@@ -317,6 +336,7 @@ const submitReply = async (event,commentId,repliedToName) =>{
 const renderLoadingIndicator = () =>{
   const commentDiv = document.querySelector(".comment-section-inner");
   commentDiv.innerHTML = `<div class="lds-dual-ring"></div>`
+  commentDiv.scrollIntoView({block: "center"})
 }
 
 renderComments();
