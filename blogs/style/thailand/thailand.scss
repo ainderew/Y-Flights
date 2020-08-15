@@ -300,6 +300,12 @@ header {
 
 // COMMENTS STYLES ======================
 
+.comment-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 // FOR COMMENT SECTION LABEL (Makes it closer to actual comment section)
 .comment-section-h4{
   margin-bottom: -4rem;
@@ -317,7 +323,7 @@ header {
 
 .comment-section-inner{
   // width: 100%;
-  min-height: 50vh;
+  min-height: 20vh;
   position: relative;
 }
 .comment-form {
