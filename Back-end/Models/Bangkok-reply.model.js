@@ -16,5 +16,5 @@ const reply = new Schema({
     
 })
 
-const PhuketReplySchema = mongoose.model("PhuketReply",reply);
-module.exports = PhuketReplySchema
+const BangkokReplySchema = mongoose.model("BangkokReply",reply);
+module.exports = BangkokReplySchema

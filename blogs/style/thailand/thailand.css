@@ -38,6 +38,18 @@
           justify-content: space-between;
 }
 
+.text-link {
+  text-decoration: none;
+  color: #0770E7;
+}
+
+.text-link-h2 {
+  text-decoration: none;
+  color: #0770E7;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
 .section-1-cont-2-col {
   width: 100%;
   display: -ms-grid;
@@ -365,6 +377,175 @@ header .header-p {
 
 .footer .social-media-icon {
   width: 1.4rem;
+}
+
+.comment-section-h4 {
+  margin-bottom: -4rem;
+}
+
+.replied-to-name {
+  color: #0770E7;
+}
+
+.replyInputContainer {
+  margin-left: 5rem;
+  -webkit-animation: 300ms opacityIn forwards linear;
+          animation: 300ms opacityIn forwards linear;
+}
+
+.comment-section-inner {
+  min-height: 50vh;
+  position: relative;
+}
+
+.comment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 2rem;
+  background: #f1f2f8;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.comment-form .comment-label {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.comment-form #comment-input-form,
+.comment-form #reply-input-comment {
+  border: none;
+  outline: none;
+}
+
+.comment-form .comment-btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.comment-form .comment-btn {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  background: #02122C;
+  color: #fff;
+}
+
+.comment-container,
+.reply-container {
+  width: 100%;
+  min-height: 10rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3.5rem auto auto;
+      grid-template-rows: 3.5rem auto auto;
+  background: #f1f2f8;
+  position: relative;
+  -webkit-animation: 300ms opacityIn forwards linear;
+          animation: 300ms opacityIn forwards linear;
+}
+
+.comment-container .comment-container-upper,
+.reply-container .comment-container-upper {
+  border-bottom: grey 1px solid;
+}
+
+.comment-container .comment-container-upper .comment-name,
+.reply-container .comment-container-upper .comment-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.comment-container .comment-container-upper .comment-date,
+.reply-container .comment-container-upper .comment-date {
+  font-size: 0.8rem;
+}
+
+.comment-container .comment-container-lower,
+.reply-container .comment-container-lower {
+  padding: 1rem 1rem 2rem  1rem;
+}
+
+.comment-container .comment-container-lower .comment-reply-btn,
+.reply-container .comment-container-lower .comment-reply-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  background: #bdbcbc;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.comment-container .comment-container-lower .comment-show-reply-btn,
+.reply-container .comment-container-lower .comment-show-reply-btn {
+  position: absolute;
+  left: 10rem;
+  bottom: 0;
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  background: #dbdada;
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+}
+
+.comment-container {
+  margin-top: 5rem;
+}
+
+.reply-container {
+  margin-left: 5rem;
+  width: calc( 100% - 5rem);
+}
+
+.comment-replies-ul .comment-replies-li {
+  list-style-type: none;
+  margin-left: 5rem;
+}
+
+.comment-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.comment-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.comment-input {
+  border: none;
+}
+
+.comment-input-name {
+  margin-right: 2rem;
 }
 
 @media only screen and (min-width: 1800px) {

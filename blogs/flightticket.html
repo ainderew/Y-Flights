@@ -157,74 +157,43 @@
                 </p>
         </div>
     </div>
-    <section class="center">
-        <div class="inner">
-            <script defer>
-                /* This code goes ABOVE the main HTML Comment Box code!
-                 replace the text in the single quotes below to customize labels.*/
-                hcb_user = {
-                    /* L10N */
-                    comments_header : 'Комментарии',
-                    name_label : 'Имя, ник',
-                    content_label: 'Ваш комментарий...',
-                    submit : 'Отправить комментарий',
-                    logout_link : '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon hcb-door-out"/>',
-                    admin_link : '<img src="https://www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon hcb-door-in"/>',
-                    no_comments_msg: 'Ни кто не оставлял комментарий - вы будете первым!',
-                    add:'Add your comment',
-                    again: 'Post another comment',
-                    rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
-                    said:'said:',
-                    prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
-                    next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
-                    showing:'Showing',
-                    to:'to',
-                    website_label:'y-flights.com',
-                    email_label:'email',
-                    anonymous:'Anonymous',
-                    mod_label:'(mod)',
-                    subscribe:'email me replies',
-                    add_image:'add image',
-                    are_you_sure:'Do you want to flag this comment as inappropriate?',
-                
-                    reply:'<img src="https://www.htmlcommentbox.com/static/images/reply.png"/> Ответить',
-                    flag:'<img src="https://www.htmlcommentbox.com/static/images/flag.png"/> Лайк',
-                    like:'<img src="https://www.htmlcommentbox.com/static/images/like.png"/> Лайк',
-                
-                    /* dates */
-                    days_ago:'дней назад',
-                    hours_ago:'несколько часов назад',
-                    minutes_ago:'минуту назад',
-                    within_the_last_minute:'в последнюю минуту',
-                
-                    msg_thankyou:'Спасибо за комментарий!',
-                    msg_approval:'(this comment is not published until approved)',
-                    msg_approval_required:'Спасибо за комментарий! Ваш комментарий появится после одобрения модератором.',
-                
-                    err_bad_html:'Your comment contained bad html.',
-                    err_bad_email:'Please enter a valid email address.',
-                    err_too_frequent:'You must wait a few seconds between posting comments.',
-                    err_comment_empty:'Your comment was not posted because it was empty!',
-                    err_denied:'Your comment was not accepted.',
-                    err_unknown:'Your comment was blocked for unknown reasons, please report this.',
-                    err_spam:'Your comment was detected as spam.',
-                    err_blocked:'Your comment was blocked by site policy.',
-                
-                    /* SETTINGS */
-                    MAX_CHARS: 8192,
-                    PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
-                    ON_COMMENT: function(){}, /* Function to call after commenting. */
-                    RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
-                };
-                </script>
-             <!-- begin wwww.htmlcommentbox.com -->
-             <!-- COMMENT SECTION -->
-            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
-            <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24RkmCCLBCxXOFHD0cfEMss0"+"&opts=16862&num=10&ts=1595752616162");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-            <!-- COMMENT SECTION -->
-        </div>
-    </section>
+
+<!-- COMMENT SECTION =======================================================================================================================================-->
+
+    <section class="comment-section center">
+      <div class="comment-section-inner inner">
+          <h4 class="comment-section-h4">Comments</h4>
+      </div>
+  </section>
+
+  <section class="center"  id="commentBox">
+      <div class="inner">
+         <form class="comment-form">
+             <div class="comment-row">
+                 <div class="comment-input-container">
+                      <label for="Name" class="comment-label">Name</label>
+                      <input required type="text" class="comment-input comment-input-name">
+                 </div>
+
+                 <div class="comment-input-container">
+                     <label for="" class="comment-label">Email</label>
+                     <input required type="text" class="comment-input comment-input-email">
+                 </div>
+             </div>
+             
+
+             <label for="comment" class="comment-label">Post a comment</label>
+             <textarea required name="comment" id="comment-input-form" cols="30" rows="5"></textarea>
+             <div class="comment-btn-container">
+                 <button onclick="submitComment(event)" type="submit" class="comment-btn">Submit</button>
+             </div>
+         </form>
+      </div>
+  </section>
+<!-- END OF COMMENTS SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    
+<!-- FOOTER ============================================================================================================================================================ -->
     
     <footer class="center footer">
         <div class="inner footer-inner">
@@ -300,7 +269,8 @@
         </div>
     </footer>
    
-<!-- end www.htmlcommentbox.com -->
+ <!-- END OF FOOTER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<script src="../scripts/blogs/Article-1.js"></script>
 <script>
     const burgerBtn = document.querySelector(".burger-menu");
     const phoneMenu = document.querySelector(".phone-menu")
