@@ -293,7 +293,7 @@ header .header-p {
 .footer .footer-link {
   color: #02122C;
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .footer .footer-ul {
@@ -304,7 +304,7 @@ header .header-p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .footer .footer-ul .footer-li {
@@ -444,7 +444,7 @@ header .header-p {
 
 .comment-container .comment-container-lower,
 .reply-container .comment-container-lower {
-  padding: 1rem 1rem 2rem  1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .comment-container .comment-container-lower .comment-reply-btn,
@@ -480,7 +480,7 @@ header .header-p {
 
 .reply-container {
   margin-left: 5rem;
-  width: calc( 100% - 5rem);
+  width: calc(100% - 5rem);
 }
 
 .comment-replies-ul .comment-replies-li {
@@ -740,10 +740,9 @@ header .header-p {
   .comment-input-name {
     margin-right: 0;
   }
-}
-
-.replyInputContainer {
-  margin-left: 0;
+  .replyInputContainer {
+    margin-left: 0;
+  }
 }
 
 @-webkit-keyframes menuIn {
