@@ -58,18 +58,17 @@ router.post("/PhuketPostReply", async (req,res) => {
       res.json(status)
     }
   }
-  
-   
-  
-  
+
 })
+
+//END OF PHUKET COMMENT ROUTES
 
 
 // THAILAND POST COMMENT ROUTE
-router.post("/PhuketPostComment", (req, res) => {
+router.post("/PhuketPostComment", async (req, res) => {
   const { name, email, comment } = req.body;
-  const status = commentHandler(name, email, comment, ThailandCommentSchema)
-
+  const status = commentHandler(name, email, comment, PhuketCommentSchema)
+  console.log(req.body)
   if (status){
     res.json("successful");
   }else{
@@ -77,6 +76,47 @@ router.post("/PhuketPostComment", (req, res) => {
   }
   
 });
+
+router.post("/PhuketPostReply", async (req,res) => {
+  const {name, email, comment, commentId, repliedToName} = req.body;
+  let generatedReplyIndex;
+  const generatedId = mongoose.Types.ObjectId();
+  
+  const fetchLatestReply = async() =>{
+    const latestReply = await PhuketReplySchema.findOne().sort({ _id: -1 })
+    
+    return latestReply
+  }
+ 
+  
+  const latestReply = await fetchLatestReply()
+
+  if (latestReply === null){
+    generatedReplyIndex = 0;
+    console.log("reply was null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, PhuketReplySchema, generatedId, PhuketCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  
+  }else{
+    generatedReplyIndex = latestReply.replyIndex + 1
+    console.log("reply was NOT null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, PhuketReplySchema, generatedId, PhuketCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  }
+
+})
+
+//END OF THAILAND COMMENT ROUTES
 
 // ARTICLE-1 POST COMMENT ROUTE
 router.post("/PhuketPostComment", (req, res) => {
