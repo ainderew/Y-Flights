@@ -116,7 +116,7 @@ const createHTMLComponent = ({name,email,comment,year,month,day,hour,minute,},in
       <p class="comment-text justify-wrapper">
           ${comment}
       </p>
-      <button onclick="onReply(${indexOfComment}, '${name}')" class="comment-reply-btn">Reply</button>
+      <button onclick="onReply(${indexOfComment}, '${name}')" class="comment-reply-btn">Ответить</button>
      
     </div>`;
   commentDiv.appendChild(div);
@@ -188,7 +188,7 @@ const renderReply = ({name, repliedToName, month,day,year,hour,minute,comment},i
           <p class="comment-text justify-wrapper">
               <span onclick="scrollToRepliedComment(${indexOfReply})" class="replied-to-name">@${repliedToName}</span> ${comment}
           </p>
-          <button onclick="onSubReply(${indexOfReply},${indexOfComment},'${name}')" class="comment-reply-btn">Reply</button>
+          <button onclick="onSubReply(${indexOfReply},${indexOfComment},'${name}')" class="comment-reply-btn">Ответить</button>
         </div>`;
   
   
@@ -210,7 +210,7 @@ const onSubReply = (indexOfReply, indexOfComment, nameOfRepliedToComment) => {
   replyInput.innerHTML = `<form class="comment-form">
           <div class="comment-row">
               <div class="comment-input-container">
-                  <label for="Name" class="comment-label">Name</label>
+                  <label for="Name" class="comment-label">Ваше имя или Ник</label>
                   <input required id="reply-input-name" type="text" class="comment-input comment-input-name">
               </div>
 
@@ -224,7 +224,7 @@ const onSubReply = (indexOfReply, indexOfComment, nameOfRepliedToComment) => {
           <label for="comment" class="comment-label">Leave a reply</label>
           <textarea required placeholder="@${nameOfRepliedToComment}" name="comment" id="reply-input-comment" cols="30" rows="5"></textarea>
           <div class="comment-btn-container">
-              <button type="submit" id="submit-reply-btn" class="comment-btn">Submit</button>
+              <button type="submit" id="submit-reply-btn" class="comment-btn">Отправить</button>
           </div>
         </form>`;
   
@@ -250,7 +250,7 @@ const onReply = (index,nameOfRepliedToComment) => {
   replyInput.innerHTML = `<form class="comment-form">
           <div class="comment-row">
               <div class="comment-input-container">
-                  <label for="Name" class="comment-label">Name</label>
+                  <label for="Name" class="comment-label">Ваше имя или Ник</label>
                   <input required id="reply-input-name" type="text" class="comment-input comment-input-name">
               </div>
 
@@ -264,7 +264,7 @@ const onReply = (index,nameOfRepliedToComment) => {
           <label for="comment" class="comment-label">Leave a reply</label>
           <textarea required  placeholder="@${nameOfRepliedToComment}" name="comment" id="reply-input-comment" cols="30" rows="5"></textarea>
           <div class="comment-btn-container">
-              <button type="submit" id="submit-reply-btn" class="comment-btn">Submit</button>
+              <button type="submit" id="submit-reply-btn" class="comment-btn">Отправить</button>
           </div>
         </form>`;
   
