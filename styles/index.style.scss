@@ -188,7 +188,7 @@
     grid-auto-rows: auto;
   }
   .section-2-upper {
-    margin: 2rem 0;
+    margin: 4rem 0;
     padding: 0 8rem;
   }
   .section-2-h2 {
@@ -199,10 +199,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem 0;
+    
   }
   .section-2-left {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    
     padding: 0 6rem 0 0;
   }
   .section-2-p {
