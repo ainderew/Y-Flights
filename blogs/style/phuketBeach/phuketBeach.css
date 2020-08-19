@@ -218,6 +218,14 @@ header .header-p {
   margin: 3rem 0;
 }
 
+.section-1 .section-1-img-special-map {
+  width: 100%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+}
+
 .section-1 .section-1-img {
   width: 100%;
   -webkit-transform: scale(1.1);

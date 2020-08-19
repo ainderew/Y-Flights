@@ -178,12 +178,20 @@ header {
     overflow: hidden;
     margin: 3rem 0;
   }
+  
+  .section-1-img-special-map {
+    width: 100%;
+    transform: scale(1.1);
+    transition: 200ms linear;
+  }
+  
 
   .section-1-img {
     width: 100%;
     transform: scale(1.1);
     transition: 200ms linear;
   }
+  
   .section-1-img:hover {
     transform: scale(1);
   }
