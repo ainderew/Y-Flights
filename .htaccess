@@ -1,4 +1,4 @@
-Redirect 301 blogs/flightticket.html blogs/flightticket
+Redirect 301 blogs/flightticket.html blogs/bali
 
 
 RewriteEngine on
