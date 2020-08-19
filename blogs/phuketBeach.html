@@ -14,6 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>
       Таиланд пляжи Пхукета, отели Пхукета, авиабилеты в Таиланд
@@ -140,32 +148,26 @@
           <span>•</span>
           <li class="section-1-li">Боря Ф</li>
         </ul>
-
-           <!--The div element for the map -->
-           <style>
-            #map {
-              width: 100%;
-              height: 400px;
-              background-color: grey;
-            }
-           </style>
-    <div id="map"></div>
-    <script defer>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqMCQWYwacTsqnHDyp3lNIlwSVtPLt244&callback=initMap">
-    </script>
         
+        <style>
+            #mapid{
+                height: 380px
+            }
+        </style>
+        <div id="mapid"></div>
+        <script>
+           const mymap = L.map('mapid').setView([51.505, -0.09], 13);
+            
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+        </script>
+
         <!-- <div class="section-1-cont-3-col">
                     <div class="section-1-img-small-wrapper">
                         <img src="../assets/articles/phuketBeach/1.jpg" alt="" class="section-1-img-small">
@@ -724,6 +726,8 @@ function initMap() {
 
     <!-- END OF FOOTER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <script src="../scripts/blogs/Bali.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+
     <script>
       const burgerBtn = document.querySelector(".burger-menu");
       const phoneMenu = document.querySelector(".phone-menu");
