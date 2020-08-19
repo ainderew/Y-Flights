@@ -5,9 +5,9 @@ rel="canonical"
 User-agent: *
 
 
-
-Allow: /
 Disallow: /flightticket.html
+Allow: /
+
 
 
 Sitemap: https://www.y-flights.com/sitemap.xml
