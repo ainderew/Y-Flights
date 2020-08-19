@@ -25,7 +25,7 @@ const submitComment = async (event) => {
   const commentorName = document.querySelector(".comment-input-name");
   const commentorEmail = document.querySelector(".comment-input-email");
   const comment = document.getElementById("comment-input-form");
-  const endpoint = `${endpointURL}comments/PhuketPoBeachstComment`;
+  const endpoint = `${endpointURL}comments/PhuketBeachPostComment`;
 
   commentDiv.scrollIntoView({block: "center"});
   const bodyObject = {
@@ -62,7 +62,7 @@ const submitComment = async (event) => {
 
 const renderComments = async () => {
   repliesArrayCtr = []
-  const endpoint = `${endpointURL}getComments/PhukeBeachtComments`;
+  const endpoint = `${endpointURL}getComments/PhuketBeachComments`;
   await fetch(endpoint, {
     method: "GET",
     mode: "cors",
@@ -135,7 +135,7 @@ const getReplies =  async (repliesArray,indexOfComment) =>{
         replyId:el
       }
       
-      const endpoint = `${endpointURL}getComments/PhukBeachetReplies` ;
+      const endpoint = `${endpointURL}getComments/PhuketBeachReplies` ;
       await fetch(endpoint,{
       mode: "cors",
       method: "POST",
