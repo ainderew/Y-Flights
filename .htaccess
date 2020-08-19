@@ -1,5 +1,6 @@
 RewriteEngine on
 
+Redirect 301 /flightticket.html /flightticket
 
 RewriteCond %{REQUEST_FILENAME} !-d
 

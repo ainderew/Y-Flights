@@ -1,7 +1,9 @@
+Redirect 301 /flightticket.html /flightticket
+
 #allow everything
 rel="canonical"
 User-agent: *
-Redirect 301 /flightticket.html /flightticket
+
 
 
 Allow: /
