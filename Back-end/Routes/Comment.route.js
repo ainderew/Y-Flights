@@ -8,6 +8,8 @@ const ThailandCommentSchema = require("../Models/Thailand-comments.model");
 const BaliCommentSchema = require("../Models/Bali-comments.model");
 const PhuketBeachCommentSchema = require("../Models/Phuket-Beach-comments.model");
 const VietnamCommentSchema = require("../Models/Vietnam-comments.model");
+const SrilankaCommentSchema = require("../Models/Sri-Lanka-comments.model");
+
 //REPLY SCHEMA
 const PhuketReplySchema = require("../Models/PhuketReply.model");
 const ThailandReplySchema = require("../Models/Thailand-reply.model")
@@ -16,6 +18,7 @@ const BangkokReplySchema = require("../Models/Bangkok-reply.model")
 const BaliReplySchema = require("../Models/Bali-reply.model")
 const PhuketBeachReplySchema = require("../Models/Phuket-Beach-Reply.model");
 const VietnamReplySchema = require("../Models/Vietnam-reply.model");
+const SrilankaReplySchema = require("../Models/Sri-Lanka-reply.model");
 
 // PHUKET POST COMMENT ROUTE
 router.post("/PhuketPostComment", async (req, res) => {
@@ -405,6 +408,61 @@ router.post("/VietnamPostReply", async (req,res) => {
 })
 
 //END OF VIETNAM COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// SRI-LANKA POST COMMENT ROUTE ====================================================================================================================================
+router.post("/SrilankaPostComment", async (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, SrilankaCommentSchema)
+  console.log(req.body)
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
+});
+
+router.post("/SrilankaPostReply", async (req,res) => {
+  const {name, email, comment, commentId, repliedToName} = req.body;
+  let generatedReplyIndex;
+  const generatedId = mongoose.Types.ObjectId();
+  
+  const fetchLatestReply = async() =>{
+    const latestReply = await SrilankaReplySchema.findOne().sort({ _id: -1 })
+    
+    return latestReply
+  }
+ 
+  
+  const latestReply = await fetchLatestReply()
+
+  if (latestReply === null){
+    generatedReplyIndex = 0;
+    console.log("reply was null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, SrilankaReplySchema, generatedId, SrilankaCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  
+  }else{
+    generatedReplyIndex = latestReply.replyIndex + 1
+    console.log("reply was NOT null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, SrilankaReplySchema, generatedId, SrilankaCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  }
+
+})
+
+//END OF SRI-LANKA COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
