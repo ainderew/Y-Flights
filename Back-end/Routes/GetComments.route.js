@@ -8,6 +8,8 @@ const BaliCommentSchema = require("../Models/Bali-comments.model");
 const PhuketBeachCommentSchema  = require("../Models/Phuket-Beach-comments.model");
 const VietnamCommentSchema = require("../Models/Vietnam-comments.model");
 const SrilankaCommentSchema = require("../Models/Sri-Lanka-comments.model");
+const PattayaCommentSchema = require("../Models/Pattaya-comments.model");
+
 
 const PhuketReplySchema = require("../Models/PhuketReply.model")
 const ThailandReplySchema = require("../Models/Thailand-reply.model")
@@ -17,6 +19,7 @@ const BaliReplySchema = require("../Models/Bali-reply.model")
 const PhuketBeachReplySchema = require("../Models/Phuket-Beach-Reply.model");
 const VietnamReplySchema = require("../Models/Vietnam-reply.model");
 const SrilankaReplySchema = require("../Models/Sri-Lanka-reply.model");
+const PattayaReplySchema = require("../Models/Pattaya-reply.model");
 
 router.get("/PhuketComments", async (req,res) =>{
     console.log("PhuketComments hit")
@@ -52,7 +55,11 @@ router.get("/VietnamComments", async (req,res) =>{
     res.json(comments)
 })
 router.get("/SrilankaComments", async (req,res) =>{
-    const comments = await VietnamCommentSchema.find()
+    const comments = await SrilankaCommentSchema.find()
+    res.json(comments)
+})
+router.get("/PattayaComments", async (req,res) =>{
+    const comments = await PattayaCommentSchema.find()
     res.json(comments)
 })
 
@@ -100,7 +107,12 @@ router.post("/VietnamReplies", async (req,res) =>{
 })
 router.post("/SrilankaReplies", async (req,res) =>{
     const {replyId} = req.body
-    const comment = await VietnamReplySchema.findOne({_id: replyId})
+    const comment = await SrilankaReplySchema.findOne({_id: replyId})
+    res.json(comment)
+})
+router.post("/PattayaReplies", async (req,res) =>{
+    const {replyId} = req.body
+    const comment = await PattayaReplySchema.findOne({_id: replyId})
     res.json(comment)
 })
 
