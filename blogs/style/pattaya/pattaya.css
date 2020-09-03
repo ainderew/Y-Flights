@@ -138,12 +138,6 @@ header .site-nav {
   z-index: 2;
 }
 
-header .site-nav-solid {
-  background: #000;
-  -webkit-animation: 1000ms opacityIn linear forwards;
-          animation: 1000ms opacityIn linear forwards;
-}
-
 header .site-nav-inner {
   width: 85vw;
   display: -webkit-box;
