@@ -4,79 +4,98 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://www.y-flights.com/</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/tours</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/flightticket</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/pattaya</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/srilanka</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/vietnam</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/phuket-beach</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/bali</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/phuket</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/thailand</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/blogs/bangkok</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.y-flights.com/sitemap</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://www.y-flights.com/blogs/thailand-travel</loc>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.y-flights.com/index.html</loc>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.y-flights.com/blogs/phuket-beach.html</loc>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 <url>
   <loc>https://www.y-flights.com/sitemap.html</loc>
-  <lastmod>2020-09-03T05:56:42+00:00</lastmod>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.y-flights.com/blogs/pattaya.html</loc>
+  <lastmod>2020-09-10T15:06:56+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
