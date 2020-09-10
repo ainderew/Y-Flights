@@ -10,6 +10,7 @@ const PhuketBeachCommentSchema = require("../Models/Phuket-Beach-comments.model"
 const VietnamCommentSchema = require("../Models/Vietnam-comments.model");
 const SrilankaCommentSchema = require("../Models/Sri-Lanka-comments.model");
 const PattayaCommentSchema = require("../Models/Pattaya-comments.model");
+const ThailandTravelCommentSchema = require("../Models/Thailand-Travel-comments.model");
 
 //REPLY SCHEMA
 const PhuketReplySchema = require("../Models/PhuketReply.model");
@@ -21,6 +22,7 @@ const PhuketBeachReplySchema = require("../Models/Phuket-Beach-Reply.model");
 const VietnamReplySchema = require("../Models/Vietnam-reply.model");
 const SrilankaReplySchema = require("../Models/Sri-Lanka-reply.model");
 const PattayaReplySchema = require("../Models/Pattaya-reply.model");
+const ThailandTravelReplySchema = require("../Models/Thailand-Travel-reply.model");
 
 // PHUKET POST COMMENT ROUTE
 router.post("/PhuketPostComment", async (req, res) => {
@@ -521,6 +523,61 @@ router.post("/PattayaPostReply", async (req,res) => {
 })
 
 //END OF  COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+//THAILAND-TRAVEL  POST COMMENT ROUTE ====================================================================================================================================
+router.post("/ThailandTravelPostComment", async (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, ThailandTravelCommentSchema)
+  console.log(req.body)
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
+});
+
+router.post("/ThailandTravelPostReply", async (req,res) => {
+  const {name, email, comment, commentId, repliedToName} = req.body;
+  let generatedReplyIndex;
+  const generatedId = mongoose.Types.ObjectId();
+  
+  const fetchLatestReply = async() =>{
+    const latestReply = await ThailandTravelReplySchema.findOne().sort({ _id: -1 })
+    
+    return latestReply
+  }
+ 
+  
+  const latestReply = await fetchLatestReply()
+
+  if (latestReply === null){
+    generatedReplyIndex = 0;
+    console.log("reply was null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, ThailandTravelReplySchema, generatedId, ThailandTravelCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  
+  }else{
+    generatedReplyIndex = latestReply.replyIndex + 1
+    console.log("reply was NOT null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, ThailandTravelReplySchema, generatedId, ThailandTravelCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  }
+
+})
+
+//THAILAND-TRAVEL END OF  COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
