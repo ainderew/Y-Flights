@@ -30,6 +30,8 @@
 .link-h5 {
   text-decoration: none;
   color: #0770E7;
+  font-size: 11px;
+  text-align: center;
 }
 
 #powered_by_1150 {
@@ -590,6 +592,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer .footer-inner .footer-col-2 .footer-col-2-p {
+  font-size: 0.8rem;
+}
+
+.footer .footer-inner .footer-col-2 .footer-col-2-last-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer-inner .footer-col-2 .footer-col-2-last-div .link-spacer {
+  margin: 0 0.5rem;
 }
 
 .footer .footer-link {

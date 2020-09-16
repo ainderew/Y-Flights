@@ -28,6 +28,8 @@
 .link-h5 {
   text-decoration: none;
   color: $main-color;
+  font-size: 11px;
+  text-align: center;
 }
 //END OF COMMON CLASSES - - - - - - - - - - - - - - - - - - - - - -
 #powered_by_1150 {
@@ -464,6 +466,17 @@
       flex-direction: column;
       // justify-content: center;
       align-items: center;
+
+      .footer-col-2-p {
+        font-size: 0.8rem;
+      }
+
+      .footer-col-2-last-div {
+        display: flex;
+        .link-spacer {
+          margin: 0 0.5rem;
+        }
+      }
     }
   }
   
