@@ -101,26 +101,35 @@ body {
 }
 
 //FONT STYLES---------------------------------------------
+.h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
 
 .h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  margin: 2rem 0;
 }
 .h3 {
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 2rem 0;
 }
 
 .p {
-  margin-top: 1rem;
-  font-size: 0.8rem;
+  margin: 2rem 0;
+  font-size: 1rem;
   line-height: 1.5rem;
   color: grey;
+  text-align: justify;
 }
-.link {
+.text-link {
   text-decoration: none;
-  color: $fourth-color;
+  color: $main-color;
 }
+
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -199,35 +208,33 @@ header {
   }
 }
 
-//================================================================================================================================================================================================
+// SECTIONS ==========================================================
 
 .section-1 {
-  margin: 5rem 0;
-
-  .section-1-ul {
-    display: flex;
-    margin: 1rem 0;
-    color: rgb(109, 109, 109);
-  }
-  .section-1-li {
-    font-size: 0.8rem;
-    list-style-type: none;
-  }
-  span {
-    margin: 0 0.5rem;
-  }
-
-  .blog-list-ul {
-    list-style-position: inside;
-  }
-
-  .blog-list-li {
-    margin-bottom: 1.5rem;
-    .link {
-      color: grey;
-    }
-  }
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
+
+.end-button-wrapper{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    
+    .end-button{
+        width: 9rem;
+        height: 3rem;
+        border: none;
+        color: white;
+        background: $main-color;
+        font-size: 1rem;
+    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+//================================================================================================================================================================================================
 
 .footer {
   background: #f1f2f8;
@@ -299,31 +306,6 @@ header {
     width: 1.4rem;
   }
 }
-// - - - - - - - - - - - - - - MEDIA QUERIES- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-@media only screen and (max-width: 1366px) {
-  .img-large {
-    width: 100%;
-    object-fit: none;
-    object-position: 100% 100%;
-  }
-
-  .img-wrapper-large {
-    width: 100%;
-    height: 130px;
-    overflow: hidden;
-  }
-
-  .blog-preview-container {
-    height: 400px;
-
-    .blog-title-container {
-      height: 20%;
-    }
-  }
-  .footer-inner {
-    width: 85vw;
-  }
-}
 
 @media only screen and (max-width: 1280px) {
   //COMMON CLASSES ==================================================================================================================
@@ -331,7 +313,7 @@ header {
   .footer-inner {
     width: 85vw;
   }
-  
+
   .inner {
     width: 70%;
   }
@@ -515,82 +497,5 @@ header {
         align-items: center;
       }
     }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .blog-preview-container {
-    width: 100%;
-    height: 400px;
-    // height: 100%;
-    padding: 1rem;
-    background: #fff;
-    -moz-box-shadow: $box-shadow;
-    -webkit-box-shadow: $box-shadow;
-    box-shadow: $box-shadow;
-
-    .blog-title-container {
-      height: 15%;
-    }
-  }
-
-  .img-wrapper-large {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .img-large {
-    width: 100%;
-    object-fit: none;
-    object-position: 50% -800%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .blog-preview-container {
-    width: 100%;
-    height: 400px;
-    // height: 100%;
-    padding: 1rem;
-    background: #fff;
-    -moz-box-shadow: $box-shadow;
-    -webkit-box-shadow: $box-shadow;
-    box-shadow: $box-shadow;
-
-    .blog-title-container {
-      height: 20%;
-    }
-  }
-
-  .img-wrapper-large {
-    width: 100%;
-    height: 130px;
-    overflow: hidden;
-  }
-
-  .img-large {
-    width: 100%;
-    object-fit: none;
-    object-position: 100% 80%;
-  }
-}
-
-//ANIMATIONS ============================================
-
-@keyframes menuIn {
-  0% {
-    transform: translateY(-100vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes opacityIn {
-  0% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
   }
 }
