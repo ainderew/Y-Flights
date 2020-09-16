@@ -1128,6 +1128,12 @@
     margin-top: 8rem !important;
     z-index: 8888 !important;
   }
+  .footer .footer-link {
+    font-size: .8rem;
+  }
+  .footer .link-h5 {
+    font-size: .6rem;
+  }
 }
 
 @media only screen and (max-width: 1080px) {
