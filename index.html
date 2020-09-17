@@ -137,37 +137,43 @@
  
         <ul class="search-ul">
           <li class="search-li">
-            <button class="search-btn">Авиабилеты</button>
+            <button id="plane-btn-search" class="search-btn">
+              <img src="./assets/plane.svg" alt="flight-btn" id="plane-search-img" class="btnImg">
+              Авиабилеты
+            </button>
           </li>
           <li class="search-li">
-            <button class="search-btn">Отели</button>
+            <button id="hotel-btn-search" class="search-btn">
+              <img  src="./assets/bed.svg" alt="hotels-btn" id="hotel-search-img" class="btnImg">
+              Отели
+            </button>
           </li>
           <li class="search-li">
             <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="" target="_blank" href="/tours">
-              <button class="search-btn">
-                <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
+              <button id="tours-btn-search" class="search-btn">
+                <img src="./assets/tours.svg" alt="tour-btn" id="tours-search-img" class="btnImg">
                 Туры
               </button>
             </a>
           </li>
           <li class="search-li">
-            <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="" target="_blank" href="/tours">
-              <button class="search-btn">
-                <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
-                Туры
+            <a  class="" target="_blank" href="https://tp.media/r?marker=290725&p=4561&u=https%3A%2F%2Fb2b.aviasales.ru%2F">
+              <button id="business-btn-search" class="search-btn">
+                <img src="./assets/business.svg" alt="tour-btn" id="business-search-img" class="btnImg">
+                ДЛЯ БИЗНЕСА
               </button>
             </a>
           </li>
           <li class="search-li">
-            <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="search-a" target="_blank" href="/tours">
+            <a  class="search-a" target="_blank" href="https://c135.travelpayouts.com/click?shmarker=290725&promo_id=4070&source_type=link&type=click">
               <button class="search-btn">
                 <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
-                Туры
+                ЖД БИЛЕТЫ
               </button>
             </a>
           </li>
         </ul>
-          <script charset="utf-8" src="//www.travelpayouts.com/widgets/9c99103bca8edefc000ca44fb8b38b5a.js?v=1993" async></script>
+          <script charset="utf-8" src="//www.travelpayouts.com/widgets/9c99103bca8edefc000ca44fb8b38b5a.js?v=1993" ></script>
 
       </section>
   
@@ -609,17 +615,30 @@
       </div>
       
 <!-- = = = = = = END OF FOOTER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-<!-- - - - - - - - - - -  FOR TOUR FUNCTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-<script>
-  const tourBtn = document.querySelector(".tourBtn");
 
-  setTimeout(() => {
-      tourBtn.style.opacity = "1"
-  }, 1000);
-</script>
+
+<!-- - - - - - - - - - -  FOR TOUR FUNCTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<script src="./scripts/index.js" ></script>
     
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
+<!-- - - - - - - - - - - - - - FOR EDITED WIDGET BUTTONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<script defer>
+  
+  // SWITCHES TO PLANE SEARCH
+  const check = document.querySelector(".mewtwo-tabs_list");
+  let first = check.firstChild;
+  planeSearchBtn.addEventListener("click", () =>{
+    first.click()
+  })
+  
+  // SWITCHES TO HOTEL SEARCH
+  const check = document.querySelector(".mewtwo-tabs_list li:nth-child(2n)");
+  hotelSearchBtn.addEventListener("click", () =>{
+    check.click()  
+  })
+
+</script>
 
 
 <!-- - - - - - - - - -  FOR PHONE MENU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -706,7 +725,6 @@
 
 
 <!-- BUTTON -->
-
 <style type="text/css"> 
 .mewtwo-tabs_list{
   display: none !important;

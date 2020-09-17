@@ -57,7 +57,7 @@
 }
 
 .search-ul .search-li .search-btn {
-  min-width: 10rem;
+  min-width: 8rem;
   height: 1.8rem;
   background: #feffff67;
   display: -webkit-box;
@@ -75,12 +75,14 @@
   text-decoration: none;
   padding: 0 1rem;
   border-radius: 1rem;
+  outline: none;
   -webkit-transition: 300ms linear;
   transition: 300ms linear;
 }
 
 .search-ul .search-li .search-btn .btnImg {
   width: 1.5rem;
+  margin-right: 1rem;
 }
 
 .search-ul .search-li .search-btn:hover {
@@ -801,10 +803,6 @@
     height: 3.19rem;
     top: 11.19rem;
     left: -11.75rem;
-  }
-  .btnImg {
-    width: 1.8rem;
-    margin-right: 0.5rem;
   }
 }
 
