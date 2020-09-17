@@ -3,12 +3,14 @@ const planeSearchImg = document.getElementById("plane-search-img");
 const hotelSearchImg = document.getElementById("hotel-search-img");
 const toursSearchImg = document.getElementById("tours-search-img");
 const businessSearchImg = document.getElementById("business-search-img");
+const trainSearchImg = document.getElementById("train-search-img");
 
 //BUTTONS
 const planeSearchBtn = document.getElementById("plane-btn-search")
 const hotelSearchBtn = document.getElementById("hotel-btn-search")
 const toursSearchBtn = document.getElementById("tours-btn-search")
 const businessSearchBtn = document.getElementById("business-btn-search")
+const trainSearchBtn = document.getElementById("train-btn-search")
 
 
 
@@ -22,6 +24,8 @@ const onHover = (btn) =>{
         toursSearchImg.src = "../assets/tours-active.svg"
     }else if (btn === 4){
         businessSearchImg.src = "../assets/business-active.svg"
+    }else if (btn === 5){
+        trainSearchImg.src = "../assets/business-active.svg"
     }
     
 }
@@ -35,6 +39,8 @@ const onLeave = (btn) =>{
         toursSearchImg.src = "../assets/tours.svg"
     }else if (btn === 4){
         businessSearchImg.src = "../assets/business.svg"
+    }else if (btn === 5){
+        trainSearchImg.src = "../assets/business.svg"
     }
 }
 
@@ -67,6 +73,13 @@ businessSearchBtn.addEventListener("mouseenter", ()=>{
 })
 businessSearchBtn.addEventListener("mouseleave", ()=>{
     onLeave(4)
+})
+
+trainSearchBtn.addEventListener("mouseenter", ()=>{
+    onHover(5)
+})
+trainSearchBtn.addEventListener("mouseleave", ()=>{
+    onLeave(5)
 })
 
 

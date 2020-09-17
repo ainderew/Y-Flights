@@ -1258,9 +1258,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1282,6 +1282,43 @@
     margin-top: 8rem !important;
     z-index: 888 !important;
     width: 100%;
+  }
+  .section-1 .search-ul {
+    width: 50%;
+    left: 10%;
+    position: relative;
+    border: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10rem;
+    margin-bottom: -8rem;
+    z-index: 10;
+  }
+  .section-1 .search-ul .search-li {
+    margin-right: 1rem;
+    list-style: none;
+  }
+  .section-1 .search-ul .search-li a {
+    text-decoration: none;
+  }
+  .section-1 .search-ul .search-li .search-btn {
+    min-width: 10rem;
+    height: 2rem;
+    background: #feffff67;
+  }
+  .section-1 .search-ul .search-li .search-btn .btnImg {
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+  .section-1 .search-ul .search-li .mobile-btn {
+    display: none;
   }
   .section-2 {
     margin: 2rem 0;
@@ -1574,12 +1611,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .section-1 .homepage-banner {
     display: none;
