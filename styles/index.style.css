@@ -41,13 +41,13 @@
 .tourBtn {
   text-decoration: none;
   width: 11.8rem;
-  height: 3.18rem;
+  height: 3.15rem;
   padding: 0 1rem;
   font-size: 1rem;
   font-family: "Open Sans";
   border: none;
   outline: none;
-  background: #02122C;
+  background: #B9C7CA;
   color: #fff;
   position: relative;
   top: 11.19rem;
@@ -753,28 +753,8 @@
   .tourBtn {
     width: 8rem;
     height: 3.19rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    outline: none;
-    padding: 0 1rem;
-    background: #02122C;
-    border: none;
-    color: #fff;
-    position: relative;
     top: 11.19rem;
     left: -11.75rem;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    z-index: 9;
-    border-left: white 1px solid;
   }
   .btnImg {
     width: 1.8rem;
@@ -795,20 +775,9 @@
   .tourBtn {
     width: 8rem;
     height: 3.18rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    outline: none;
     padding: 0 1rem;
-    background: #02122C;
-    border: none;
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: -12.2rem;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1060,17 +1029,11 @@
     display: flex;
     width: 12rem;
     height: 3.18rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    outline: none;
-    padding: 0 1rem;
-    background: #02122C;
     border: none;
     color: #fff;
     position: relative;
     top: 11.18rem;
     left: -9.8rem;
-    cursor: pointer;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1146,16 +1109,8 @@
     width: 11.8rem;
     height: 3.15rem;
     padding: 0 1rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    border: none;
-    outline: none;
-    background: #02122C;
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: -9.2rem;
-    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1224,13 +1179,6 @@
     width: 11.8rem;
     height: 3.18rem;
     padding: 0 1rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    border: none;
-    outline: none;
-    background: #02122C;
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: 18rem;
     cursor: pointer;
@@ -1512,7 +1460,7 @@
     font-family: "Open Sans";
     border: none;
     outline: none;
-    background: #02122C;
+    background: #B9C7CA;
     color: #fff;
     position: relative;
     top: 8rem;

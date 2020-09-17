@@ -38,20 +38,18 @@
 .tourBtn {
   text-decoration: none;
   width: 11.8rem;
-  height: 3.18rem;
+  height: 3.15rem;
   padding: 0 1rem;
   font-size: 1rem;
   font-family: "Open Sans";
   border: none;
   outline: none;
-  background: $btn-color;
+  background: #B9C7CA;
 
   color: #fff;
   position: relative;
   top: 11.19rem;
-  // top: 12.19rem;
   left: -10.19rem;
-  // border: 1px solid red;;
 
   cursor: pointer;
   display: flex;
@@ -598,25 +596,8 @@
   .tourBtn {
     width: 8rem;
     height: 3.19rem;
-
-    font-size: 1rem;
-    font-family: "Open Sans";
-    outline: none;
-    padding: 0 1rem;
-    background: $btn-color;
-    border: none;
-    color: #fff;
-    position: relative;
     top: 11.19rem;
     left: -11.75rem;
-    // border: 1px solid red;;
-
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 9;
-    border-left: white 1px solid;
   }
   .btnImg {
     width: 1.8rem;
@@ -638,20 +619,9 @@
   .tourBtn {
     width: 8rem;
     height: 3.18rem;
-
-    font-size: 1rem;
-    font-family: "Open Sans";
-    outline: none;
     padding: 0 1rem;
-    background: $btn-color;
-    border: none;
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: -12.2rem;
-
-    cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     z-index: 9;
@@ -873,20 +843,11 @@
     display: flex;
     width: 12rem;
     height: 3.18rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-
-    outline: none;
-    padding: 0 1rem;
-    background: $btn-color;
     border: none;
     color: #fff;
     position: relative;
     top: 11.18rem;
     left: -9.8rem;
-    // border: 1px solid red;;
-// s
-    cursor: pointer;
 
     align-items: center;
     justify-content: flex-start;
@@ -958,18 +919,8 @@
     width: 11.8rem;
     height: 3.15rem;
     padding: 0 1rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    border: none;
-    outline: none;
-    background: $btn-color;
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: -9.2rem;
-    // border: 1px solid red;;
-
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1021,14 +972,6 @@
     width: 11.8rem;
     height: 3.18rem;
     padding: 0 1rem;
-    font-size: 1rem;
-    font-family: "Open Sans";
-    border: none;
-    outline: none;
-    background: $btn-color;
-
-    color: #fff;
-    position: relative;
     top: 11.18rem;
     left: 18rem;
     // border: 1px solid red;;
@@ -1254,7 +1197,7 @@
     font-family: "Open Sans";
     border: none;
     outline: none;
-    background: $btn-color;
+    background: #B9C7CA;
 
     color: #fff;
     position: relative;
