@@ -131,9 +131,8 @@
     <!-- ================MAIN SECTION - 1 ================================================================================================================================================================ -->
     <section class="center section-1">
       <div class="inner col-2">
-        
-         <!-- THAILAND TRAVEL BLOG PREVIEW -->
-         <a href="./blogs/thailand-travel" class="spacer-vertical-1rem">
+        <!-- THAILAND TRAVEL BLOG PREVIEW -->
+        <a href="./blogs/thailand-travel" class="spacer-vertical-1rem">
           <div class="blog-preview-container">
             <div class="blog-title-container">
               <h2 class="h2">Курорты Тайланда</h2>
@@ -153,15 +152,12 @@
               />
             </div>
             <div class="justify-wrapper">
-              <p class="p">
-                Отдых в Таиланде можно спланировать по-разному.
-              </p>
+              <p class="p">Отдых в Таиланде можно спланировать по-разному.</p>
             </div>
           </div>
         </a>
         <!-- END OF THAILAND TRAVEL BLOG PREVIEW -->
-        
-        
+
         <!-- PATTAYA BLOG PREVIEW -->
         <a href="./blogs/pattaya" class="spacer-vertical-1rem">
           <div class="blog-preview-container">
@@ -430,8 +426,10 @@
         </a>
       </div>
     </section>
+    <!-- = = = = = = FOOTER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =-->
+
     <footer class="center footer">
-      <div class="footer-inner">
+      <div class="inner footer-inner">
         <div class="footer-col-1">
           <h2 class="footer-h2">Обзоры популярных направлений</h2>
 
@@ -468,6 +466,10 @@
               Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
             </h4>
           </div>
+
+          <p class="footer-col-2-p">
+            При копировании материалов прямая ссылка обязательна.
+          </p>
 
           <div class="social-media-container">
             <ul class="social-media-ul">
@@ -510,7 +512,6 @@
                   />
                 </a>
               </li>
-
               <li class="social-media-li">
                 <a
                   target="_blank"
@@ -526,12 +527,38 @@
               </li>
             </ul>
           </div>
-          <a href="./sitemap" class="link-h5">Карта сайта</a>
+          <div class="footer-col-2-last-div">
+            <a href="./sitemap" class="link-h5 link-spacer">Карта сайта</a>
+            <a href="./personal-data" class="link-h5 link-spacer">
+              Политика конфиденциальности
+            </a>
+            <a href="./terms-of-use" class="link-h5 link-spacer">
+              Правила пользования
+            </a>
+          </div>
         </div>
+
         <div class="footer-col-3"></div>
       </div>
     </footer>
 
+    <div class="cookie-warning">
+      <div class="inner inner-cookie">
+        <p class="cookie-p">
+          Этот веб-сайт использует куки, используя его, вы соглашаетесь с нашими
+          условиями и услугами
+        </p>
+        <button
+          onclick="document.querySelector('.cookie-warning').style='display:none'"
+          class="cookie-btn"
+        >
+          Ладно
+        </button>
+      </div>
+    </div>
+
+    <!-- = = = = = = END OF FOOTER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+    
     <!-- - - - - - - - - -  FOR PHONE MENU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <script>
       const burgerBtn = document.querySelector(".burger-menu");

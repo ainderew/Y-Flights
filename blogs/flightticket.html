@@ -1,311 +1,424 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/article-1/article-1.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <meta name="description" content="Мы не продаем билеты на самолет и номера отелей на прямую. Мы помогаем найти выгодный и удобный вариант авиабилетов, отелей и туров."> 
-    <title>Поиск дешевых авиабилетов, отелей и туров на сервисе - Y-Flights</title>
-     <!-- Yandex.Metrika counter -->
-     <script defer type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-          m[i] =
-            m[i] ||
-            function () {
-              (m[i].a = m[i].a || []).push(arguments);
-            };
-          m[i].l = 1 * new Date();
-          (k = e.createElement(t)),
-            (a = e.getElementsByTagName(t)[0]),
-            (k.async = 1),
-            (k.src = r),
-            a.parentNode.insertBefore(k, a);
-        })(
-          window,
-          document,
-          "script",
-          "https://mc.yandex.ru/metrika/tag.js",
-          "ym"
-        );
-        ym(65631823, "init", {
-          clickmap: true,
-          trackLinks: true,
-          accurateTrackBounce: true,
-          webvisor: true,
-        });
-      </script>
-      <noscript
-        ><div>
-          <img
-            src="https://mc.yandex.ru/watch/65631823"
-            style="position: absolute; left: -9999px;"
-            alt=""
-          /></div
-      ></noscript>
-      <!-- /Yandex.Metrika counter -->
-  
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <!-- set to async if there is problems -->
-      <script
-        defer 
-        src="https://www.googletagmanager.com/gtag/js?id=UA-142208290-4"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "UA-142208290-4");
-      </script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/article-1/article-1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Мы не продаем билеты на самолет и номера отелей на прямую. Мы помогаем найти выгодный и удобный вариант авиабилетов, отелей и туров."
+    />
+    <title>
+      Поиск дешевых авиабилетов, отелей и туров на сервисе - Y-Flights
+    </title>
+    <!-- Yandex.Metrika counter -->
+    <script defer type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+      ym(65631823, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/65631823"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- set to async if there is problems -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142208290-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142208290-4");
+    </script>
+  </head>
+  <body>
     <div class="phone-menu">
-        <ul class="phone-ul">
-            <li class="phone-li">
-                <a href="/index" class="phone-a">Авиабилеты
-                </a>
-            </li>
-            <li class="phone-li">
-                <a href="/index" class="phone-a">Отели 
-                </a>
-            </li>
-            <li class="phone-li">
-                <a href="https://y-flights.com" class="phone-a">Блог</a>
-            </li>
-            <li class="phone-li">
-                <a href="https://c26.travelpayouts.com/click?shmarker=290725&promo_id=554&source_type=link&type=click" class="phone-a">Туры</a>
-            </li>
-        </ul>
+      <ul class="phone-ul">
+        <li class="phone-li">
+          <a href="/index" class="phone-a">Авиабилеты</a>
+        </li>
+        <li class="phone-li">
+          <a href="/index" class="phone-a">Отели</a>
+        </li>
+        <li class="phone-li">
+          <a href="https://y-flights.com" class="phone-a">Блог</a>
+        </li>
+        <li class="phone-li">
+          <a
+            href="https://c26.travelpayouts.com/click?shmarker=290725&promo_id=554&source_type=link&type=click"
+            class="phone-a"
+          >
+            Туры
+          </a>
+        </li>
+      </ul>
     </div>
     <header>
-        <nav class="phone-nav">
+      <nav class="phone-nav">
+        <a href="https://www.y-flights.com">
+          <img src="../../assets/logo.svg" alt="y-flights" class="logo-phone" />
+        </a>
+
+        <img src="../assets/list.svg" alt="menu" class="burger-menu" />
+        <p class="close">X</p>
+      </nav>
+      <nav class="site-nav">
+        <div class="site-nav-inner">
+          <div class="logo-container">
             <a href="https://www.y-flights.com">
-                <img src="../../assets/logo.svg" alt="y-flights" class="logo-phone">
+              <img src="../../assets/logo.svg" alt="y-flights" class="logo" />
             </a>
-            
-            <img src="../assets/list.svg" alt="menu" class="burger-menu">
-            <p class="close">X</p>
-        </nav>
-        <nav class="site-nav">
-            <div class="site-nav-inner">
-                <div class="logo-container">
-                    <a href="https://www.y-flights.com">
-                     <img src="../../assets/logo.svg" alt="y-flights" class="logo">
-                    </a>
-                </div>
-                <ul class="site-ul">
-                    <li class="site-li">
-                        <a href="/index" class="site-a">Авиабилеты
-                        </a>
-                    </li>
-                    <li class="site-li">
-                        <a href="/index" class="site-a">Отели 
-                        </a>
-                    </li>
-                    <li class="site-li">
-                        <a target="_blank" href="../blogs" class="site-a">Блог</a>
-                    </li>
-                    <li class="site-li">
-                        <a target="_blank" href="../tours"  class="site-a">Туры</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <h1 class="header-1-h1">Поиск дешевых авиабилетов, бронирование отелей</h1>
-       
-        <p class="header-p">Y-Flights это поиск самых выгодных билетов на самолет и бронирование отелей </p>
-    </header>
-    
-    <div class="center section-1">
-        <div class="inner">
-            <h2 class="section-h2">Вопросы и ответы - Y-Flights</h2>
-            <ul class="section-1-ul">
-                <li class="section-1-li">July 26, 2020</li>
-                <span>•</span>
-                <li class="section-1-li">Автор</li>
-                <span>•</span>
-                <li class="section-1-li">Боря Ф</li>
-            </ul>
-           <div class="section-1-img-wrapper">
-            <img src="../../assets/articles/article-1/img-1.jpg" alt="" class="section-1-img">
-           </div>
-           <p class="section-1-p">Все просто. В мире существует тысячи авиакомпаний и тур агентств, предлагающих различные варианты на покупку авиабилетов, бронирование отелей и покупку туров. Человеку, которому нужны авиабилеты, отели или тур, приходится открывать кучу вкладок, выписывать ни листок варианты и пытаться сравнить где выгоднее.</p>
-           <h2 class="section-1-h2">По какому принципу сервис подбирает билеты на самолет, отели и туры.</h2>
-           <p class="section-1-p">Сервис по поиску авиабилетов, отелей и туров Y-Flights сделает это за вас.
-            На нашем сервисе представлены билеты от 728 крупных авиакомпаний и 48 отелей. Вам лишь нужно ввести аэропорт вылета, пункт назначения и удобные даты, и сервис произведет подборку всех возможных вариантов за 1-2 минуты. Будут представлены как самые дешевые авиабилеты и отели, так и самые оптимальные варианты.
-            </p>
-            <h2 class="section-1-h2">Никаких скрытых комиссий и сборов. Предложенные варианты имеют окончательную цену.</h2>
-            <p class="section-1-p">Мы не продаем билеты на самолет и номера отелей на прямую. Мы помогаем найти выгодный и удобный для вас вариант. Выбрав нужный вариант, вы будете перенаправлены на сайт авиакомпании или агентства.
-                При этом мы произведем поиск билетов и гостиниц без скрытых комиссий и платежей, проще говоря, цена на авиабилеты, которую вы увидите на нашем сайте будет финальной. За поиск на сервисе вы не платите и будет круто если порекомендуете сервис Y-Flights друзьям, знакомым и коллегам.
-                
-                Мы представляем авиабилеты, отели и туры от 728 авиакомпаний и 45 крупных агентств.
-                Заем искать выборочно на сайте каждой авиакомпании, если можно найти самый удобный и выгодный вариант на Y-Flights и купить его на сайте авиакомпании.
-                </p>
-            <h2 class="section-1-h2">А чем еще полезен ваш сервис спросите вы? Ответим с удовольствием.</h2>
-            <div class="section-1-img-wrapper">
-                <img src="../../assets/articles/article-1/img-2.jpg" alt="" class="section-1-img">
-            </div>
-            
-            <p class="section-1-p">Мы предлагаем варианты не только от авиакомпаний, но и от 45 проверенных туристических агентств.
-                Дело в том, что в агентстве можно найти рейсы в популярные экзотические места, по выгодной цене (даже дешевле чем у авиакомпании, да и не будет у них этого билета в выдаче).
-                 И помните, вирус отступает и скоро мы сможем начать путешествовать по миру. А поможет в этом сервис поиска дешевых авиабилетов, отелей и туров
-                Y-Flights.
-                
-                Берегите себя.
-                </p>
+          </div>
+          <ul class="site-ul">
+            <li class="site-li">
+              <a href="/index" class="site-a">Авиабилеты</a>
+            </li>
+            <li class="site-li">
+              <a href="/index" class="site-a">Отели</a>
+            </li>
+            <li class="site-li">
+              <a target="_blank" href="../blogs" class="site-a">Блог</a>
+            </li>
+            <li class="site-li">
+              <a target="_blank" href="../tours" class="site-a">Туры</a>
+            </li>
+          </ul>
         </div>
+      </nav>
+      <h1 class="header-1-h1">
+        Поиск дешевых авиабилетов, бронирование отелей
+      </h1>
+
+      <p class="header-p">
+        Y-Flights это поиск самых выгодных билетов на самолет и бронирование
+        отелей
+      </p>
+    </header>
+
+    <div class="center section-1">
+      <div class="inner">
+        <h2 class="section-h2">Вопросы и ответы - Y-Flights</h2>
+        <ul class="section-1-ul">
+          <li class="section-1-li">July 26, 2020</li>
+          <span>•</span>
+          <li class="section-1-li">Автор</li>
+          <span>•</span>
+          <li class="section-1-li">Боря Ф</li>
+        </ul>
+        <div class="section-1-img-wrapper">
+          <img
+            src="../../assets/articles/article-1/img-1.jpg"
+            alt=""
+            class="section-1-img"
+          />
+        </div>
+        <p class="section-1-p">
+          Все просто. В мире существует тысячи авиакомпаний и тур агентств,
+          предлагающих различные варианты на покупку авиабилетов, бронирование
+          отелей и покупку туров. Человеку, которому нужны авиабилеты, отели или
+          тур, приходится открывать кучу вкладок, выписывать ни листок варианты
+          и пытаться сравнить где выгоднее.
+        </p>
+        <h2 class="section-1-h2">
+          По какому принципу сервис подбирает билеты на самолет, отели и туры.
+        </h2>
+        <p class="section-1-p">
+          Сервис по поиску авиабилетов, отелей и туров Y-Flights сделает это за
+          вас. На нашем сервисе представлены билеты от 728 крупных авиакомпаний
+          и 48 отелей. Вам лишь нужно ввести аэропорт вылета, пункт назначения и
+          удобные даты, и сервис произведет подборку всех возможных вариантов за
+          1-2 минуты. Будут представлены как самые дешевые авиабилеты и отели,
+          так и самые оптимальные варианты.
+        </p>
+        <h2 class="section-1-h2">
+          Никаких скрытых комиссий и сборов. Предложенные варианты имеют
+          окончательную цену.
+        </h2>
+        <p class="section-1-p">
+          Мы не продаем билеты на самолет и номера отелей на прямую. Мы помогаем
+          найти выгодный и удобный для вас вариант. Выбрав нужный вариант, вы
+          будете перенаправлены на сайт авиакомпании или агентства. При этом мы
+          произведем поиск билетов и гостиниц без скрытых комиссий и платежей,
+          проще говоря, цена на авиабилеты, которую вы увидите на нашем сайте
+          будет финальной. За поиск на сервисе вы не платите и будет круто если
+          порекомендуете сервис Y-Flights друзьям, знакомым и коллегам. Мы
+          представляем авиабилеты, отели и туры от 728 авиакомпаний и 45 крупных
+          агентств. Заем искать выборочно на сайте каждой авиакомпании, если
+          можно найти самый удобный и выгодный вариант на Y-Flights и купить его
+          на сайте авиакомпании.
+        </p>
+        <h2 class="section-1-h2">
+          А чем еще полезен ваш сервис спросите вы? Ответим с удовольствием.
+        </h2>
+        <div class="section-1-img-wrapper">
+          <img
+            src="../../assets/articles/article-1/img-2.jpg"
+            alt=""
+            class="section-1-img"
+          />
+        </div>
+
+        <p class="section-1-p">
+          Мы предлагаем варианты не только от авиакомпаний, но и от 45
+          проверенных туристических агентств. Дело в том, что в агентстве можно
+          найти рейсы в популярные экзотические места, по выгодной цене (даже
+          дешевле чем у авиакомпании, да и не будет у них этого билета в
+          выдаче). И помните, вирус отступает и скоро мы сможем начать
+          путешествовать по миру. А поможет в этом сервис поиска дешевых
+          авиабилетов, отелей и туров Y-Flights. Берегите себя.
+        </p>
+      </div>
     </div>
 
-<!-- COMMENT SECTION =======================================================================================================================================-->
+    <!-- COMMENT SECTION =======================================================================================================================================-->
 
     <section class="comment-section center">
       <div class="inner">
         <h4 class="comment-section-h4">Комментарии</h4>
       </div>
-      <div class="comment-section-inner inner">
-        
-      </div>
-  </section>
+      <div class="comment-section-inner inner"></div>
+    </section>
 
-  <section class="center"  id="commentBox">
+    <section class="center" id="commentBox">
       <div class="inner">
-         <form class="comment-form">
-             <div class="comment-row">
-                 <div class="comment-input-container">
-                      <label for="Name" class="comment-label">Ваше имя или Ник</label>
-                      <input required type="text" class="comment-input comment-input-name">
-                 </div>
+        <form class="comment-form">
+          <div class="comment-row">
+            <div class="comment-input-container">
+              <label for="Name" class="comment-label">Ваше имя или Ник</label>
+              <input
+                required
+                type="text"
+                class="comment-input comment-input-name"
+              />
+            </div>
 
-                 <div class="comment-input-container">
-                     <label for="" class="comment-label">Email</label>
-                     <input required type="text" class="comment-input comment-input-email">
-                 </div>
-             </div>
-             
+            <div class="comment-input-container">
+              <label for="" class="comment-label">Email</label>
+              <input
+                required
+                type="text"
+                class="comment-input comment-input-email"
+              />
+            </div>
+          </div>
 
-             <label for="comment" class="comment-label">Оставить комментарий</label>
-             <textarea required name="comment" id="comment-input-form" cols="30" rows="5"></textarea>
-             <div class="comment-btn-container">
-                 <button onclick="submitComment(event)" type="submit" class="comment-btn">Отправить</button>
-             </div>
-         </form>
+          <label for="comment" class="comment-label">
+            Оставить комментарий
+          </label>
+          <textarea
+            required
+            name="comment"
+            id="comment-input-form"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <div class="comment-btn-container">
+            <button
+              onclick="submitComment(event)"
+              type="submit"
+              class="comment-btn"
+            >
+              Отправить
+            </button>
+          </div>
+        </form>
       </div>
-  </section>
-<!-- END OF COMMENTS SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    </section>
+    <!-- END OF COMMENTS SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
 
-    
-<!-- FOOTER ============================================================================================================================================================ -->
-    
+    <!-- = = = = = = FOOTER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =-->
+
     <footer class="center footer">
-        <div class="inner footer-inner">
-          <div class="footer-col-1">
-            <h2 class="footer-h2">Обзоры популярных направлений</h2>
-            
-            <ul class="footer-ul">
-              <li class="footer-li">
-                <a href="../blogs/Phuket" class="footer-link">
-                  Отдых на Пхукете
+      <div class="inner footer-inner">
+        <div class="footer-col-1">
+          <h2 class="footer-h2">Обзоры популярных направлений</h2>
+
+          <ul class="footer-ul">
+            <li class="footer-li">
+              <a href="./blogs/Phuket" class="footer-link">Отдых на Пхукете</a>
+            </li>
+
+            <li class="footer-li">
+              <a href="./blogs/Thailand" class="footer-link">
+                Таиланд, как добраться, где отдохнуть
+              </a>
+            </li>
+
+            <li class="footer-li">
+              <a href="./blogs/Bangkok" class="footer-link">
+                Столица Таиланда – Бангкок
+              </a>
+            </li>
+
+            <li class="footer-li">
+              <a href="./blogs/flightticket" class="footer-link">
+                Поиск авиабилетов, отелей и туров – почему мы
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col-2">
+          <h2 class="footer-h2">Y-Flights.com &copy; 2020</h2>
+
+          <div class="footer-align-container">
+            <h4 class="footer-h4">
+              Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
+            </h4>
+          </div>
+
+          <p class="footer-col-2-p">
+            При копировании материалов прямая ссылка обязательна.
+          </p>
+
+          <div class="social-media-container">
+            <ul class="social-media-ul">
+              <li class="social-media-li">
+                <a
+                  target="_blank"
+                  href="https://vk.com/y.flights"
+                  class="social-media-a"
+                >
+                  <img
+                    src="../assets/social media icons/vk.svg"
+                    alt="Vkontakte"
+                    class="social-media-icon"
+                  />
                 </a>
               </li>
-              
-              <li class="footer-li">
-                <a href="../blogs/Thailand" class="footer-link">
-                  Таиланд, как добраться, где отдохнуть
+              <li class="social-media-li">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/y_flights"
+                  class="social-media-a"
+                >
+                  <img
+                    src="../assets/social media icons/twitter.svg"
+                    alt="twitter"
+                    class="social-media-icon"
+                  />
                 </a>
               </li>
-              
-              <li class="footer-li">
-                <a href="../blogs/Bangkok" class="footer-link">
-                  Столица Таиланда – Бангкок
+              <li class="social-media-li">
+                <a
+                  target="_blank"
+                  href="https://t.me/yflights"
+                  class="social-media-a"
+                >
+                  <img
+                    src="../assets/social media icons/telegram.svg"
+                    alt="telegram"
+                    class="social-media-icon"
+                  />
                 </a>
               </li>
-              
-              <li class="footer-li">
-                <a href="../blogs/flightticket" class="footer-link">
-                  Поиск авиабилетов, отелей и туров – почему мы
+              <li class="social-media-li">
+                <a
+                  target="_blank"
+                  href="https://facebook.com/y.flights"
+                  class="social-media-a"
+                >
+                  <img
+                    src="../assets/social media icons/facebook.svg"
+                    alt="facebook"
+                    class="social-media-icon"
+                  />
                 </a>
               </li>
-              
             </ul>
           </div>
-          
-          <div class="footer-col-2">
-              <h2 class="footer-h2">Y-Flights.com &copy; 2020</h2>
-              
-             <div class="footer-align-container">
-                <h4 class="footer-h4">
-                  Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
-                </h4>
-             </div>
-              
-              <div class="social-media-container">
-                <ul class="social-media-ul">
-                    <li class="social-media-li">
-                        <a target="_blank" href="https://vk.com/y.flights" class="social-media-a">
-                            <img src="../assets/social media icons/vk.svg" alt="Vkontakte" class="social-media-icon">
-                        </a>
-                    </li>
-                    <li class="social-media-li">
-                        <a target="_blank" href="https://twitter.com/y_flights" class="social-media-a">
-                            <img src="../assets/social media icons/twitter.svg" alt="twitter" class="social-media-icon">
-                        </a>
-                    </li>
-                    <li class="social-media-li">
-                        <a target="_blank" href="https://t.me/yflights" class="social-media-a">
-                            <img src="../assets/social media icons/telegram.svg" alt="telegram" class="social-media-icon">
-                        </a>
-                    </li>
-                    
-                    <li class="social-media-li">
-                      <a target="_blank" href="https://facebook.com/y.flights" class="social-media-a">
-                          <img src="../assets/social media icons/facebook.svg" alt="facebook" class="social-media-icon">
-                      </a>
-                  </li>
-                </ul>
-              </div>
-              <a href="../sitemap" class="link-h5">Карта сайта</a>
-          
+          <div class="footer-col-2-last-div">
+            <a href="./sitemap" class="link-h5 link-spacer">Карта сайта</a>
+            <a href="./personal-data" class="link-h5 link-spacer">
+              Политика конфиденциальности
+            </a>
+            <a href="./terms-of-use" class="link-h5 link-spacer">
+              Правила пользования
+            </a>
           </div>
-          <div class="footer-col-3"></div>
         </div>
+
+        <div class="footer-col-3"></div>
+      </div>
     </footer>
-   
- <!-- END OF FOOTER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-<script src="../scripts/blogs/Article-1.js"></script>
-<script>
-    const burgerBtn = document.querySelector(".burger-menu");
-    const phoneMenu = document.querySelector(".phone-menu")
-    const closeBtn = document.querySelector(".close");
-    const show = () =>{
-        phoneMenu.style.display = "flex"
-        burgerBtn.style.display = "none"
-        closeBtn.style.display = "block"
-    }
-    const close = () =>{
-        phoneMenu.style.display = "none"
-        burgerBtn.style.display = "block"
-        closeBtn.style.display = "none"
-    }
+
     
-    burgerBtn.addEventListener("click" ,show)
-    closeBtn.addEventListener("click", close)
-</script>
 
-<!-- - - - - - - - - - - FOR WEBSITE HEADER OPACITY CHANGE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-<script defer>
-    const nav = document.querySelector(".site-nav");
-    window.onscroll = function () { 
-        if (document.body.scrollTop >= 600 || document.documentElement.scrollTop >= 600 ) {
-            nav.classList.add("site-nav-solid");
-        } 
-        else {
-            nav.classList.remove("site-nav-solid");
+    <!-- = = = = = = END OF FOOTER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+    <script src="../scripts/blogs/Article-1.js"></script>
+    <script>
+      const burgerBtn = document.querySelector(".burger-menu");
+      const phoneMenu = document.querySelector(".phone-menu");
+      const closeBtn = document.querySelector(".close");
+      const show = () => {
+        phoneMenu.style.display = "flex";
+        burgerBtn.style.display = "none";
+        closeBtn.style.display = "block";
+      };
+      const close = () => {
+        phoneMenu.style.display = "none";
+        burgerBtn.style.display = "block";
+        closeBtn.style.display = "none";
+      };
+
+      burgerBtn.addEventListener("click", show);
+      closeBtn.addEventListener("click", close);
+    </script>
+
+    <!-- - - - - - - - - - - FOR WEBSITE HEADER OPACITY CHANGE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <script defer>
+      const nav = document.querySelector(".site-nav");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop >= 600 ||
+          document.documentElement.scrollTop >= 600
+        ) {
+          nav.classList.add("site-nav-solid");
+        } else {
+          nav.classList.remove("site-nav-solid");
         }
-    }
-</script> 
+      };
+    </script>
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-</body>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </body>
 </html>

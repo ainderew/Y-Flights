@@ -232,6 +232,17 @@ header {
       flex-direction: column;
       // justify-content: center;
       align-items: center;
+      
+      .footer-col-2-p {
+        font-size: 0.8rem;
+      }
+
+      .footer-col-2-last-div {
+        display: flex;
+        .link-spacer {
+          margin: 0 0.5rem;
+        }
+      }
     }
   }
   
@@ -461,6 +472,34 @@ header {
         width: 50%;
     }
 }
+
+@media only screen and (max-width: 1280px) {
+  //COMMON CLASSES ==================================================================================================================
+
+  .footer-inner {
+    width: 85vw;
+  }
+
+  .footer{
+    .link-h5{
+      font-size: .6rem;
+    }
+    .footer-link{
+      font-size: .8rem;
+    }
+  }
+
+  // column-containers - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  .col-2-right-widget {
+    display: grid;
+    grid-template-columns: 1fr 18rem;
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  //=================================================================================================================================
+}
+
 @media only screen and (max-width: 900px) {
   // COMMON CLASSES
   // ------------------------------------------------------------------------------------------

@@ -342,6 +342,20 @@ header .header-p {
           align-items: center;
 }
 
+.footer .footer-inner .footer-col-2 .footer-col-2-p {
+  font-size: 0.8rem;
+}
+
+.footer .footer-inner .footer-col-2 .footer-col-2-last-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer-inner .footer-col-2 .footer-col-2-last-div .link-spacer {
+  margin: 0 0.5rem;
+}
+
 .footer .footer-link {
   color: #02122C;
   text-decoration: none;
@@ -579,6 +593,24 @@ header .header-p {
 
 .comment-input-name {
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer-inner {
+    width: 85vw;
+  }
+  .footer .link-h5 {
+    font-size: .6rem;
+  }
+  .footer .footer-link {
+    font-size: .8rem;
+  }
+  .col-2-right-widget {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 18rem;
+        grid-template-columns: 1fr 18rem;
+  }
 }
 
 @media only screen and (min-width: 1800px) {

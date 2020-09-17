@@ -124,6 +124,40 @@ body {
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+.cookie-warning {
+  height: 2rem;
+  background-color: $main-color;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  .inner-cookie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .cookie-p {
+    font-size: 0.7rem;
+  }
+  .cookie-btn {
+    border: none;
+    background: #fff;
+    color: $main-color;
+    width: 5rem;
+  }
+}
+// SEARCH ----------------------------------------------
+.gsc-control-cse {
+  padding: 0 !important;
+  margin-bottom: 1rem;
+}
+.gsc-search-button {
+  background: $fourth-color !important;
+  border-color: $fourth-color !important;
+}
+// - - - - - - - - - - - - - - - - - - -
+
 //= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // PHONE MENU =====================================================================================================================
@@ -249,6 +283,24 @@ header {
       flex-direction: column;
       // justify-content: center;
       align-items: center;
+      
+      .footer-col-2-p {
+        font-size: 0.8rem;
+      }
+      
+      .footer-col-2-last-div {
+        display: flex;
+        .link-spacer {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    .link-h5 {
+      text-decoration: none;
+      color: $main-color;
+      font-size: .6rem;
+      // white-space: nowrap;
+      text-align: center;
     }
   }
 
@@ -332,8 +384,17 @@ header {
     width: 85vw;
   }
   
-  .inner {
-    width: 70%;
+  // .inner {
+  //   width: 70%;
+  // }
+  
+  .footer{
+    .link-h5{
+      font-size: .6rem;
+    }
+    .footer-link{
+      font-size: .8rem;
+    }
   }
 
   // column-containers - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
