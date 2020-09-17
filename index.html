@@ -135,10 +135,38 @@
           Выберите город вылета и прилета, укажите дату и мы подберем вам выгодный вариант
         </h2>
  
-        <a style="opacity: 0;" onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="tourBtn" target="_blank" href="/tours">
-            <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
-            Туры
-        </a>
+        <ul class="search-ul">
+          <li class="search-li">
+            <button class="search-btn">Авиабилеты</button>
+          </li>
+          <li class="search-li">
+            <button class="search-btn">Отели</button>
+          </li>
+          <li class="search-li">
+            <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="" target="_blank" href="/tours">
+              <button class="search-btn">
+                <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
+                Туры
+              </button>
+            </a>
+          </li>
+          <li class="search-li">
+            <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="" target="_blank" href="/tours">
+              <button class="search-btn">
+                <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
+                Туры
+              </button>
+            </a>
+          </li>
+          <li class="search-li">
+            <a  onclick="ym(65631823, 'reachGoal', 'tours'); return true;" class="search-a" target="_blank" href="/tours">
+              <button class="search-btn">
+                <img src="./assets/tours.svg" alt="tour-btn" class="btnImg">
+                Туры
+              </button>
+            </a>
+          </li>
+        </ul>
           <script charset="utf-8" src="//www.travelpayouts.com/widgets/9c99103bca8edefc000ca44fb8b38b5a.js?v=1993" async></script>
 
       </section>
@@ -616,7 +644,9 @@
 <!-- - - - - - - - - - -  FOR PHONE MENU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
    
 
-<style type="text/css"> .mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-flights { background: transparent !important;
+<style type="text/css">
+
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-flights { background: transparent !important;
   border-color: transparent !important;
   border-radius: 2px !important ;
 }
@@ -668,7 +698,7 @@
 .mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-hotels-submit_button button:hover { background: #5ac58a !important;
 }
 
-} </style>
+ </style>
 
 
 
@@ -677,26 +707,57 @@
 
 <!-- BUTTON -->
 
-<style type="text/css"> .mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item { background-color: #B9C7CA !important;
-border: none !important;
+<style type="text/css"> 
+.mewtwo-tabs_list{
+  display: none !important;
+}
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item { 
+  background-color: #b9c7ca3b !important;
+  border: none !important;
+  border-radius: 2rem !important;
+  margin: 0 .5rem !important;
   color: #ffffff !important;
+  font-size: .8rem !important;
+  box-shadow: none !important;
 }
 
-.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item.mewtwo-tabs-tabs_list__item--active { background-color: #B9C7CA !important;
-  border: none!important;
+/* .mewtwo-widget .mewtwo-tabs-tabs_list__item:first-child{
+  
+} */
+
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item.mewtwo-tabs-tabs_list__item--active { 
+  background-color: #B9C7CA !important;
+  border: 20px solid red!important;
+  box-shadow: none!important;
+  
 }
-.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item span { color: #ffffff !important;
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item span {
+   color: #ffffff !important;
+   border: none !important;
 }
 
-.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item:first-child { border-top-left-radius: 2px !important ;
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item:first-child { 
+  border-radius: 2rem !important ;
+  box-shadow: none!important;
+  border: none !important;
 }
 
-.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item:last-child { border-top-right-radius: 2px !important ;
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item:last-child { 
+  border-radius: 2rem !important ;
+  padding: 0 1rem !important;
 }
 
-.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item.mewtwo-tabs-tabs_list__item--active { background-color: #B9C7CA !important;
-  border: 0px solid #B9C7CA !important;
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item.mewtwo-tabs-tabs_list__item--active { 
+  background-color: #fff !important;
+  border: none !important;
 }
+
+.mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item.mewtwo-tabs-tabs_list__item--active::after{
+  border: none !important;
+  box-shadow: none!important;
+  clear: both;
+}
+
 .mewtwo-widget--9c99103bca8edefc000ca44fb8b38b5a .mewtwo-tabs-tabs_list__item--active:after { background-color: #B9C7CA !important;
 }
 
