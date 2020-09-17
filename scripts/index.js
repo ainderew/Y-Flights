@@ -25,7 +25,7 @@ const onHover = (btn) =>{
     }else if (btn === 4){
         businessSearchImg.src = "../assets/business-active.svg"
     }else if (btn === 5){
-        trainSearchImg.src = "../assets/business-active.svg"
+        trainSearchImg.src = "../assets/train-active.svg"
     }
     
 }
@@ -40,7 +40,7 @@ const onLeave = (btn) =>{
     }else if (btn === 4){
         businessSearchImg.src = "../assets/business.svg"
     }else if (btn === 5){
-        trainSearchImg.src = "../assets/business.svg"
+        trainSearchImg.src = "../assets/train.svg"
     }
 }
 
