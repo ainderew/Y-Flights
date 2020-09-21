@@ -213,7 +213,9 @@ header .header-p {
 
 .section-1 .section-1-img-small-wrapper {
   width: 100%;
+  min-width: 840px;
   height: 500px;
+  min-height: 500px;
   overflow: hidden;
 }
 
@@ -231,6 +233,7 @@ header .header-p {
 .section-1 .section-1-img-wrapper {
   width: 100%;
   height: 350px;
+  min-height: 350px;
   overflow: hidden;
   margin: 3rem 0;
 }
@@ -582,9 +585,13 @@ header .header-p {
 @media only screen and (min-width: 1800px) {
   .section-1 .section-1-img-wrapper {
     height: 550px;
+    min-height: 550px;
+    max-width: 840px;
+    margin: auto;
   }
   .section-1 .section-1-img {
     height: 100%;
+    min-height: 550px;
   }
 }
 
