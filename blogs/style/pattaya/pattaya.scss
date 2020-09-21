@@ -199,11 +199,11 @@ header {
   }
   .section-1-img-wrapper {
     width: 100%;
-    // min-width: 840px;
+    max-width: 1000px;
     height: 350px;
     min-height: 350px;
     overflow: hidden;
-    margin: 3rem 0;
+    margin: 3rem auto;
   }
 
   .section-1-img {
@@ -499,13 +499,13 @@ header {
 }
 
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (max-width: 1800px) {
   .section-1 {
     .section-1-img-wrapper {
-      height: 550px;
-      min-height: 550px;
+      height: 350px;
+      min-height: 350px;
       max-width: 840px;
-      margin: auto;
+      margin: 3rem auto;
     }
 
     .section-1-img {
