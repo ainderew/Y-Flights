@@ -1,0 +1,259 @@
+@import "../../scss_variables/colors";
+
+.footer {
+  background: #f1f2f8;
+  height: auto;
+  .footer-inner {
+    width: 65vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 0;
+
+    .footer-col-1 {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: flex-start;
+    }
+
+    .footer-col-2 {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+
+      .footer-col-2-p {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      .footer-col-2-last-div {
+        display: flex;
+        .link-h5 {
+          text-decoration: none;
+          color: $main-color;
+          font-size: 11px;
+          text-align: center;
+        }
+        
+        .link-spacer {
+          margin: 0 0.5rem;
+        }
+        
+      }
+    }
+  }
+
+  .footer-link {
+    color: $fourth-color;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .footer-ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+
+    .footer-li {
+      list-style-type: none;
+      margin-top: 1rem;
+    }
+  }
+
+  .footer-align-container {
+    width: 70%;
+    margin: 1rem 0;
+    .footer-h4 {
+      text-align: center;
+      // font-weight: 200;
+      color: #cdced3;
+    }
+  }
+  .footer-h2 {
+    font-size: 1rem;
+  }
+
+  .link-h5 {
+    text-decoration: none;
+    color: $main-color;
+  }
+
+  .social-media-ul {
+    display: flex;
+    margin: 1rem 0;
+  }
+  .social-media-li {
+    list-style-type: none;
+    margin: 0 0.5rem;
+  }
+
+  .social-media-icon {
+    width: 1.4rem;
+  }
+}
+
+.cookie-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 45%;
+  background: $main-color;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999999;
+
+  .cookie-inner {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .cookie-h4 {
+      font-size: 1.2rem;
+    }
+    .cookie-p {
+      text-align: justify;
+    }
+    .cookie-p-bottom {
+      font-size: 0.8rem;
+    }
+
+    .cookie-a {
+      color: #fff;
+    }
+  }
+
+  .cookie-btn-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    .cookie-btn {
+      width: 50%;
+      height: 2.5rem;
+      //   border: 4px solid #fff;
+      border: none;
+      background-color: $third-color;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .cookie-accept {
+      margin-right: 1rem;
+      // border: 4px solid $third-color;
+      background: $fourth-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .footer{
+    .footer-inner{
+      width: 90vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  
+  
+  .cookie-modal {
+    width: 30%;
+    height: 60%;
+    background: $main-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cookie-inner {
+      width: 85%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .cookie-h4 {
+        font-size: 1.2rem;
+      }
+      .cookie-p {
+        text-align: justify;
+      }
+      .cookie-p-bottom {
+        font-size: 0.8rem;
+      }
+
+      .cookie-a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer {
+    .footer-link {
+      font-size: 0.8rem;
+    }
+    .link-h5 {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    background: #f1f2f8;
+    height: auto;
+    .footer-inner {
+      display: grid;
+      grid-template-columns: (1fr);
+      grid-auto-rows: auto;
+      padding: 1rem 0;
+
+      .footer-col-1 {
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+      }
+
+      .footer-col-2 {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cookie-modal {
+    width: 95%;
+    height: 80%;
+    background: $main-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cookie-inner {
+      width: 85%;
+    }
+    .cookie-btn-container {
+      .cookie-btn {
+        font-size: 0.9rem;
+      }
+    }
+
+    .cookie-h4 {
+      font-size: 1.2rem;
+    }
+  }
+}

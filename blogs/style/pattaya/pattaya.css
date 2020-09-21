@@ -21,10 +21,6 @@
   width: 50%;
 }
 
-.footer-inner {
-  width: 85vw;
-}
-
 .justify-wrapper {
   text-align: justify;
 }
@@ -270,116 +266,6 @@ header .header-p {
   list-style-type: disc;
   list-style-position: inside;
   margin: 0.5rem 0;
-}
-
-.footer {
-  background: #f1f2f8;
-  height: auto;
-}
-
-.footer .footer-inner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  padding: 2rem 0;
-}
-
-.footer .footer-inner .footer-col-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.footer .footer-inner .footer-col-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .footer-inner .footer-col-2 .footer-col-2-p {
-  font-size: 0.8rem;
-}
-
-.footer .footer-inner .footer-col-2 .footer-col-2-last-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer .footer-inner .footer-col-2 .footer-col-2-last-div .link-spacer {
-  margin: 0 0.5rem;
-}
-
-.footer .footer-link {
-  color: #02122C;
-  text-decoration: none;
-  font-size: .9rem;
-}
-
-.footer .footer-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: .5rem 0;
-}
-
-.footer .footer-ul .footer-li {
-  list-style-type: none;
-  margin-top: 1rem;
-}
-
-.footer .footer-align-container {
-  width: 70%;
-  margin: 1rem 0;
-}
-
-.footer .footer-align-container .footer-h4 {
-  text-align: center;
-  color: #cdced3;
-}
-
-.footer .footer-h2 {
-  font-size: 1rem;
-}
-
-.footer .link-h5 {
-  text-decoration: none;
-  color: #0770E7;
-}
-
-.footer .social-media-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1rem 0;
-}
-
-.footer .social-media-li {
-  list-style-type: none;
-  margin: 0 0.5rem;
-}
-
-.footer .social-media-icon {
-  width: 1.4rem;
 }
 
 .comment-section {
