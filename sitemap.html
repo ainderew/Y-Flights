@@ -294,6 +294,26 @@
           <div class="footer-col-3"></div>
         </div>
       </footer>
+      
+      <script>
+        const burgerBtn = document.querySelector(".burger-menu");
+        const phoneMenu = document.querySelector(".phone-menu")
+        const closeBtn = document.querySelector(".close");
+        const show = () =>{
+            phoneMenu.style.display = "flex"
+            burgerBtn.style.display = "none"
+            closeBtn.style.display = "block"
+        }
+        const close = () =>{
+            phoneMenu.style.display = "none"
+            burgerBtn.style.display = "block"
+            closeBtn.style.display = "none"
+        }
+        
+        burgerBtn.addEventListener("click" ,show)
+        closeBtn.addEventListener("click", close)
+    </script>
+    
     
 </body>
 </html>
