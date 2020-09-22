@@ -262,6 +262,10 @@ header {
 }
 
 @media only screen and (max-width: 900px) {
+  .inner{
+    width: 95%;
+  }
+  
   .footer {
     background: #f1f2f8;
     height: auto;
