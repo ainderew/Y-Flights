@@ -6,6 +6,8 @@ User-agent: *
 
 
 Disallow: /flightticket.html
+Disallow: /index.html
+
 Allow: /
 
 
