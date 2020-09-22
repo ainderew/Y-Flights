@@ -603,12 +603,13 @@ header {
 
   .img-wrapper-large {
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     overflow: hidden;
   }
 
   .img-large {
     width: 100%;
+    min-height: 200px;
     // object-fit: none;
     // object-position: 50% -800%;
   }
