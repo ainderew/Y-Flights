@@ -27,26 +27,30 @@
   text-align: justify;
 }
 
-table{
-    border-collapse: collapse;
-    width: 100%;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td,th{
-    border: 1px solid black;
-    text-align: justify;
-    padding: .5rem 1rem;
+td,
+th {
+  border: 1px solid black;
+  text-align: justify;
+  padding: 0.5rem 1rem;
 }
 //TEXT STYLES -----------------------------------------------
 .span-italize {
   font-style: italic;
 }
 
-.section-1-p {
-    text-align: justify;
-    margin: 1rem 0;
-  }
-
+.p {
+  text-align: justify;
+  margin: 1rem 0;
+}
+.h3{
+  font-size: 1rem;
+  margin: 2rem 0;
+}
 .text-link {
   text-decoration: none;
   color: $main-color;
@@ -75,11 +79,11 @@ td,th{
 }
 
 //Spacers
-.spacer-vertical-1rem{
-    margin: 1rem 0;
+.spacer-vertical-1rem {
+  margin: 1rem 0;
 }
-.spacer-vertical-2rem{
-    margin: 2rem 0;
+.spacer-vertical-2rem {
+  margin: 2rem 0;
 }
 
 // =============================================================================================
@@ -90,7 +94,6 @@ td,th{
 }
 
 // ------------------------------------------------------------------------------------------
-
 
 header {
   width: 100%;
@@ -121,10 +124,10 @@ header {
     z-index: 2;
   }
 
-//   .site-nav-solid {
-//     background: #000;
-//     animation: 1000ms opacityIn linear forwards;
-//   }
+  //   .site-nav-solid {
+  //     background: #000;
+  //     animation: 1000ms opacityIn linear forwards;
+  //   }
 
   .site-nav-inner {
     width: 85vw;
@@ -191,7 +194,7 @@ header {
   }
   .section-1-img-small {
     height: 100%;
-    
+
     transition: 200ms linear;
   }
   .section-1-img-small:hover {
@@ -200,14 +203,15 @@ header {
   .section-1-img-wrapper {
     width: 100%;
     max-width: 1000px;
-    height: 350px;
-    min-height: 350px;
+    height: 563px;
+    min-height: 563px;
     overflow: hidden;
     margin: 3rem auto;
   }
 
   .section-1-img {
     width: 100%;
+    height: 563px;
     transform: scale(1.1);
     transition: 200ms linear;
   }
@@ -236,20 +240,20 @@ header {
 //     display: grid;
 //     grid-template-columns: repeat(3, 1fr);
 //     padding: 2rem 0;
-    
+
 //     .footer-col-1{
 //       display: flex;
 //       flex-direction: column;
 //       // justify-content: center;
 //       align-items: flex-start;
 //     }
-    
+
 //     .footer-col-2{
 //       display: flex;
 //       flex-direction: column;
 //       // justify-content: center;
 //       align-items: center;
-      
+
 //       .footer-col-2-p {
 //         font-size: 0.8rem;
 //       }
@@ -262,7 +266,7 @@ header {
 //       }
 //     }
 //   }
-  
+
 //   .footer-link{
 //     color: $fourth-color;
 //     text-decoration: none;
@@ -272,13 +276,13 @@ header {
 //     display: flex;
 //     flex-direction: column;
 //     margin: .5rem 0;
-    
+
 //     .footer-li{
 //       list-style-type: none;
 //       margin-top: 1rem;
 //     }
 //   }
-  
+
 //   .footer-align-container{
 //     width: 70%;
 //     margin: 1rem 0;
@@ -291,7 +295,7 @@ header {
 //   .footer-h2{
 //     font-size: 1rem;
 //   }
-  
+
 //   .link-h5 {
 //     text-decoration: none;
 //     color: $main-color;
@@ -311,30 +315,29 @@ header {
 //   }
 // }
 
-
 // COMMENTS STYLES ======================
 
-.comment-section{
+.comment-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 // FOR COMMENT SECTION LABEL (Makes it closer to actual comment section)
-.comment-section-h4{
+.comment-section-h4 {
   margin-bottom: -4rem;
 }
 
-.replied-to-name{
+.replied-to-name {
   color: $main-color;
 }
 
 //FOR THE REPLY INPUT FORM INDENT
-.replyInputContainer{
+.replyInputContainer {
   margin-left: 5rem;
   animation: 300ms opacityIn forwards linear;
 }
 
-.comment-section-inner{
+.comment-section-inner {
   // width: 100%;
   min-height: 20vh;
   position: relative;
@@ -353,12 +356,10 @@ header {
   }
 
   #comment-input-form,
-  #reply-input-comment{
+  #reply-input-comment {
     border: none;
     outline: none;
   }
-  
-  
 
   .comment-btn-container {
     width: 100%;
@@ -377,7 +378,7 @@ header {
 }
 
 .comment-container,
-.reply-container{
+.reply-container {
   width: 100%;
   min-height: 10rem;
   padding: 1rem;
@@ -403,7 +404,7 @@ header {
   }
 
   .comment-container-lower {
-    padding: 1rem 1rem 2rem  1rem;
+    padding: 1rem 1rem 2rem 1rem;
 
     .comment-reply-btn {
       position: absolute;
@@ -434,12 +435,12 @@ header {
   }
 }
 
-.comment-container{
+.comment-container {
   margin-top: 5rem;
 }
-.reply-container{
+.reply-container {
   margin-left: 5rem;
-  width: calc( 100% - 5rem)
+  width: calc(100% - 5rem);
 }
 
 .comment-replies-ul {
@@ -449,27 +450,42 @@ header {
   }
 }
 
-
-.comment-row{
+.comment-row {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.comment-input-container{
+.comment-input-container {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.comment-input{
+.comment-input {
   border: none;
 }
 
-.comment-input-name{
+.comment-input-name {
   margin-right: 2rem;
 }
 // END OF COMMENT STYLES ========================================
 
+@media only screen and (max-width: 1800px) {
+  .section-1 {
+    .section-1-img-wrapper {
+      height: 563px;
+      min-height: 563px;
+      max-width: 1000px;
+      margin: 3rem auto;
+    }
+
+    .section-1-img {
+      height: 563px;
+      min-height: 563px;
+      max-height: 563px;
+    }
+  }
+}
 
 @media only screen and (max-width: 1280px) {
   //COMMON CLASSES ==================================================================================================================
@@ -478,12 +494,12 @@ header {
     width: 85vw;
   }
 
-  .footer{
-    .link-h5{
-      font-size: .6rem;
+  .footer {
+    .link-h5 {
+      font-size: 0.6rem;
     }
-    .footer-link{
-      font-size: .8rem;
+    .footer-link {
+      font-size: 0.8rem;
     }
   }
 
@@ -495,25 +511,23 @@ header {
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  //=================================================================================================================================
-}
-
-
-@media only screen and (max-width: 1800px) {
   .section-1 {
     .section-1-img-wrapper {
-      height: 350px;
-      min-height: 350px;
-      max-width: 840px;
+      height: 358px;
+      min-height: 358px;
+      max-height: 358px;
       margin: 3rem auto;
     }
 
     .section-1-img {
-      height: 100%;
-      min-height: 550px;  
+      height: 358px;
+      min-height: 358px;
+      max-height: 358px;
     }
   }
+  //=================================================================================================================================
 }
+
 @media only screen and (max-width: 900px) {
   // COMMON CLASSES
   // ------------------------------------------------------------------------------------------
@@ -679,7 +693,7 @@ header {
       font-size: 1.7rem;
     }
 
-    .section-1-p {
+    .p {
       text-align: justify;
     }
     .section-1-img-small-wrapper {
@@ -694,24 +708,25 @@ header {
     }
 
     .section-1-img {
-      height: 100%;
+      height: 250px;
+      min-height: 250px;
     }
 
     .section-1-li-styled {
       text-align: justify;
     }
   }
-  .comment-row{
+  .comment-row {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
   }
-  .comment-input-name{
+  .comment-input-name {
     margin-right: 0;
   }
 }
 
-.replyInputContainer{
+.replyInputContainer {
   margin-left: 0;
 }
 
@@ -728,7 +743,7 @@ header {
   0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 100%;
   }
 }
@@ -754,7 +769,6 @@ header {
   border: 6px solid rgb(8, 7, 37);
   border-color: rgb(8, 7, 37) transparent rgb(8, 7, 37) transparent;
   animation: lds-dual-ring 1.2s linear infinite;
-  
 }
 @keyframes lds-dual-ring {
   0% {
@@ -764,6 +778,5 @@ header {
     transform: rotate(360deg);
   }
 }
-
 
 // LOADING CSS
