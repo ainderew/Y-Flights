@@ -8,7 +8,6 @@
         бронированию отелей, поиску дешевых туров и просто советы путешественникам.
     ">
     <link rel="stylesheet" href="./styles/sitemap/sitemap.css">
-    <link rel="stylesheet" href="./styles/global-styles/footer/footer.style.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
     rel="stylesheet"
@@ -185,135 +184,74 @@
         <div class="footer-inner">
           <div class="footer-col-1">
             <h2 class="footer-h2">Обзоры популярных направлений</h2>
-  
+            
             <ul class="footer-ul">
               <li class="footer-li">
-                <a href="./blogs/Phuket" class="footer-link">Отдых на Пхукете</a>
+                <a href="./blogs/Phuket" class="footer-link">
+                  Отдых на Пхукете
+                </a>
               </li>
-  
+              
               <li class="footer-li">
                 <a href="./blogs/Thailand" class="footer-link">
                   Таиланд, как добраться, где отдохнуть
                 </a>
               </li>
-  
+              
               <li class="footer-li">
                 <a href="./blogs/Bangkok" class="footer-link">
                   Столица Таиланда – Бангкок
                 </a>
               </li>
-  
+              
               <li class="footer-li">
                 <a href="./blogs/flightticket" class="footer-link">
                   Поиск авиабилетов, отелей и туров – почему мы
                 </a>
               </li>
+              
             </ul>
           </div>
-  
+          
           <div class="footer-col-2">
-            <h2 class="footer-h2">Y-Flights.com &copy; 2020</h2>
-  
-            <div class="footer-align-container">
-              <h4 class="footer-h4">
-                Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
-              </h4>
-            </div>
-  
-            <p class="footer-col-2-p">
-              При копировании материалов прямая ссылка обязательна.
-            </p>
-  
-            <div class="social-media-container">
-              <ul class="social-media-ul">
-                <li class="social-media-li">
-                  <a
-                    target="_blank"
-                    href="https://vk.com/y.flights"
-                    class="social-media-a"
-                  >
-                    <img
-                      src="../assets/social media icons/vk.svg"
-                      alt="Vkontakte"
-                      class="social-media-icon"
-                    />
-                  </a>
-                </li>
-                <li class="social-media-li">
-                  <a
-                    target="_blank"
-                    href="https://twitter.com/y_flights"
-                    class="social-media-a"
-                  >
-                    <img
-                      src="../assets/social media icons/twitter.svg"
-                      alt="twitter"
-                      class="social-media-icon"
-                    />
-                  </a>
-                </li>
-                <li class="social-media-li">
-                  <a
-                    target="_blank"
-                    href="https://t.me/yflights"
-                    class="social-media-a"
-                  >
-                    <img
-                      src="../assets/social media icons/telegram.svg"
-                      alt="telegram"
-                      class="social-media-icon"
-                    />
-                  </a>
-                </li>
-                <li class="social-media-li">
-                  <a
-                    target="_blank"
-                    href="https://facebook.com/y.flights"
-                    class="social-media-a"
-                  >
-                    <img
-                      src="../assets/social media icons/facebook.svg"
-                      alt="facebook"
-                      class="social-media-icon"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-col-2-last-div">
-              <a href="../sitemap" class="link-h5 link-spacer">Карта сайта</a>
-              <a href="../personal-data" class="link-h5 link-spacer">
-                Политика конфиденциальности
-              </a>
-              <a href="../terms-of-use" class="link-h5 link-spacer">
-                Правила пользования
-              </a>
-            </div>
+              <h2 class="footer-h2">Y-Flights.com &copy; 2020</h2>
+              
+             <div class="footer-align-container">
+                <h4 class="footer-h4">
+                  Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
+                </h4>
+             </div>
+              
+              <div class="social-media-container">
+                <ul class="social-media-ul">
+                    <li class="social-media-li">
+                        <a target="_blank" href="https://vk.com/y.flights" class="social-media-a">
+                            <img src="./assets/social media icons/vk.svg" alt="Vkontakte" class="social-media-icon">
+                        </a>
+                    </li>
+                    <li class="social-media-li">
+                        <a target="_blank" href="https://twitter.com/y_flights" class="social-media-a">
+                            <img src="./assets/social media icons/twitter.svg" alt="twitter" class="social-media-icon">
+                        </a>
+                    </li>
+                    <li class="social-media-li">
+                        <a target="_blank" href="https://t.me/yflights" class="social-media-a">
+                            <img src="./assets/social media icons/telegram.svg" alt="telegram" class="social-media-icon">
+                        </a>
+                    </li>
+                    <li class="social-media-li">
+                        <a target="_blank" href="https://facebook.com/y.flights" class="social-media-a">
+                            <img src="./assets/social media icons/facebook.svg" alt="facebook" class="social-media-icon">
+                        </a>
+                    </li>
+                </ul>
+              </div>
+              <a href="./sitemap" class="link-h5">Карта сайта</a>
+          
           </div>
-  
           <div class="footer-col-3"></div>
         </div>
       </footer>
-      
-      <script>
-        const burgerBtn = document.querySelector(".burger-menu");
-        const phoneMenu = document.querySelector(".phone-menu")
-        const closeBtn = document.querySelector(".close");
-        const show = () =>{
-            phoneMenu.style.display = "flex"
-            burgerBtn.style.display = "none"
-            closeBtn.style.display = "block"
-        }
-        const close = () =>{
-            phoneMenu.style.display = "none"
-            burgerBtn.style.display = "block"
-            closeBtn.style.display = "none"
-        }
-        
-        burgerBtn.addEventListener("click" ,show)
-        closeBtn.addEventListener("click", close)
-    </script>
-    
     
 </body>
 </html>
