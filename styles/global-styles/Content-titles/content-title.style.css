@@ -26,6 +26,18 @@
   margin-bottom: .3rem;
 }
 
+.margin-left-1rem {
+  margin-left: 1rem;
+}
+
+.margin-left-2rem {
+  margin-left: 2rem;
+}
+
+.margin-left-3rem {
+  margin-left: 3rem !important;
+}
+
 .close {
   -webkit-animation: close 100ms forwards;
           animation: close 100ms forwards;

@@ -28,10 +28,15 @@
     }
 }
 
-// .display-none{
-//     display: none;
-// }
-
+.margin-left-1rem{
+    margin-left: 1rem;
+}
+.margin-left-2rem{
+    margin-left: 2rem;
+}
+.margin-left-3rem{
+    margin-left: 3rem !important;
+}
 .close{
     animation: close 100ms forwards;
 }
