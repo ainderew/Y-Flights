@@ -44,6 +44,12 @@ th {
 .p {
   text-align: justify;
   margin: 1rem 0;
+  text-indent: 2rem;
+}
+
+.p-normal {
+  text-align: justify;
+  margin: 1rem 0;
 }
 
 .h3 {
@@ -95,6 +101,20 @@ th {
 
 .phone-menu {
   display: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr,
+td,
+th {
+  border: 1px solid black;
+  width: 1fr;
+  text-align: center;
 }
 
 header {
@@ -255,7 +275,8 @@ header .header-p {
           transform: scale(1);
 }
 
-.section-1 .section-1-h2 {
+.section-1 .section-1-h2,
+.section-1 .h2 {
   font-size: 1.2rem;
   margin: 2rem 0;
 }
