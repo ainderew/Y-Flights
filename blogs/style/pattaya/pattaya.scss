@@ -19,6 +19,14 @@
   width: 50%;
 }
 
+.ul{
+  list-style-position: inside;
+}
+
+.li{
+  list-style-position: inside;
+}
+
 // .footer-inner{
 //   width: 85vw;
 // }
@@ -163,6 +171,9 @@ header {
       height: 4rem;
     }
   }
+
+
+
   .site-ul {
     display: flex;
   }

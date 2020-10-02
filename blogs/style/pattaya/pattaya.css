@@ -21,6 +21,14 @@
   width: 50%;
 }
 
+.ul {
+  list-style-position: inside;
+}
+
+.li {
+  list-style-position: inside;
+}
+
 .justify-wrapper {
   text-align: justify;
 }

@@ -41,6 +41,10 @@
   list-style-position: inside;
 }
 
+.li {
+  list-style-position: inside;
+}
+
 .span-italize {
   font-style: italic;
 }
