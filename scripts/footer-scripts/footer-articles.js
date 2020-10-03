@@ -7,23 +7,23 @@ footer.innerHTML = `
 
   <ul class="footer-ul">
     <li class="footer-li">
-      <a href="./blogs/Phuket" class="footer-link">Отдых на Пхукете</a>
+      <a href="../blogs/Phuket" class="footer-link">Отдых на Пхукете</a>
     </li>
 
     <li class="footer-li">
-      <a href="./blogs/Thailand" class="footer-link">
+      <a href="../blogs/Thailand" class="footer-link">
         Таиланд, как добраться, где отдохнуть
       </a>
     </li>
 
     <li class="footer-li">
-      <a href="./blogs/Bangkok" class="footer-link">
+      <a href="../blogs/Bangkok" class="footer-link">
         Столица Таиланда – Бангкок
       </a>
     </li>
 
     <li class="footer-li">
-      <a href="./blogs/flightticket" class="footer-link">
+      <a href="../blogs/flightticket" class="footer-link">
         Поиск авиабилетов, отелей и туров – почему мы
       </a>
     </li>
@@ -34,9 +34,9 @@ footer.innerHTML = `
   <h3 class="footer-h2">Y-Flights.com &copy; 2020</h3>
 
   <div class="footer-align-container">
-    <h4 class="footer-h4">
+    <h3 class="footer-h4">
       Поиск дешевых авиабилетов и отелей, бронирование туров онлайн
-    </h4>
+    </h3>
   </div>
 
   <p class="footer-col-2-p">
