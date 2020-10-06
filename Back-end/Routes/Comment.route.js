@@ -11,6 +11,7 @@ const VietnamCommentSchema = require("../Models/Vietnam-comments.model");
 const SrilankaCommentSchema = require("../Models/Sri-Lanka-comments.model");
 const PattayaCommentSchema = require("../Models/Pattaya-comments.model");
 const ThailandTravelCommentSchema = require("../Models/Thailand-Travel-comments.model");
+const SamuiCommentSchema = require("../Models/Samui-comments.model");
 
 //REPLY SCHEMA
 const PhuketReplySchema = require("../Models/PhuketReply.model");
@@ -23,6 +24,7 @@ const VietnamReplySchema = require("../Models/Vietnam-reply.model");
 const SrilankaReplySchema = require("../Models/Sri-Lanka-reply.model");
 const PattayaReplySchema = require("../Models/Pattaya-reply.model");
 const ThailandTravelReplySchema = require("../Models/Thailand-Travel-reply.model");
+const SamuiReplySchema = require("../Models/Samui-reply.model");
 
 // PHUKET POST COMMENT ROUTE
 router.post("/PhuketPostComment", async (req, res) => {
@@ -470,7 +472,7 @@ router.post("/SrilankaPostReply", async (req,res) => {
 
 
 
-//  POST COMMENT ROUTE ====================================================================================================================================
+//PATAYYA POST COMMENT ROUTE ====================================================================================================================================
 router.post("/PattayaPostComment", async (req, res) => {
   const { name, email, comment } = req.body;
   const status = commentHandler(name, email, comment, PattayaCommentSchema)
@@ -522,7 +524,7 @@ router.post("/PattayaPostReply", async (req,res) => {
 
 })
 
-//END OF  COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+//END OF PATAYYA COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 //THAILAND-TRAVEL  POST COMMENT ROUTE ====================================================================================================================================
@@ -578,6 +580,61 @@ router.post("/ThailandTravelPostReply", async (req,res) => {
 })
 
 //THAILAND-TRAVEL END OF  COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+//SAMUI POST COMMENT ROUTE ====================================================================================================================================
+router.post("/SamuiPostComment", async (req, res) => {
+  const { name, email, comment } = req.body;
+  const status = commentHandler(name, email, comment, SamuiCommentSchema)
+  console.log(req.body)
+  if (status){
+    res.json("successful");
+  }else{
+    res.json(status)
+  }
+  
+});
+
+router.post("/SamuiPostReply", async (req,res) => {
+  const {name, email, comment, commentId, repliedToName} = req.body;
+  let generatedReplyIndex;
+  const generatedId = mongoose.Types.ObjectId();
+  
+  const fetchLatestReply = async() =>{
+    const latestReply = await SamuiReplySchema.findOne().sort({ _id: -1 })
+    
+    return latestReply
+  }
+ 
+  
+  const latestReply = await fetchLatestReply()
+
+  if (latestReply === null){
+    generatedReplyIndex = 0;
+    console.log("reply was null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, SamuiReplySchema, generatedId, SamuiCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  
+  }else{
+    generatedReplyIndex = latestReply.replyIndex + 1
+    console.log("reply was NOT null")
+    console.log(latestReply)
+    const status = await replyHandler(name, email, comment, commentId, repliedToName, generatedReplyIndex, SamuiReplySchema, generatedId, SamuiCommentSchema)
+    if (status){
+      res.json("successful");
+    }else{
+      res.json(status)
+    }
+  }
+
+})
+
+//SAMUI END OF  COMMENT ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
