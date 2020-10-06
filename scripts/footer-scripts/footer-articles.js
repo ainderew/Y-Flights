@@ -8,7 +8,7 @@ footer.innerHTML = `
   <ul class="footer-ul">
     <li class="footer-li">
       <a href="../" class="footer-link">
-      Поиск авиабилетов и отелей
+      Наши сервисы
       </a>
     </li>
 
