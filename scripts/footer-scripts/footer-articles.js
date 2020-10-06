@@ -32,7 +32,7 @@ footer.innerHTML = `
     
     <li class="footer-li">
       <a target="_blank" href="https://b2b.aviasales.ru/?utm_source=travelpayouts&sub_id=5ba30469a5774d858212654fc-290725" class="footer-link">
-      Авиабилеты для бизнесац
+      Авиабилеты для бизнеса
       </a>
     </li>
   </ul>
