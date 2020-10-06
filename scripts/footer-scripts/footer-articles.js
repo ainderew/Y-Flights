@@ -7,24 +7,32 @@ footer.innerHTML = `
 
   <ul class="footer-ul">
     <li class="footer-li">
-      <a href="../blogs/Phuket" class="footer-link">Отдых на Пхукете</a>
-    </li>
-
-    <li class="footer-li">
-      <a href="../blogs/Thailand" class="footer-link">
-        Таиланд, как добраться, где отдохнуть
+      <a href="../" class="footer-link">
+      Поиск авиабилетов и отелей
       </a>
     </li>
 
     <li class="footer-li">
-      <a href="../blogs/Bangkok" class="footer-link">
-        Столица Таиланда – Бангкок
+      <a href="../tours" class="footer-link">
+        Поиск туров
       </a>
     </li>
 
     <li class="footer-li">
-      <a href="../blogs/flightticket" class="footer-link">
-        Поиск авиабилетов, отелей и туров – почему мы
+      <a target="_blank" href="https://myrentacar.com/en/?r=2869&utm_source=travelpayouts&trace_id=060fe6e37e8245249f588e804-290725" class="footer-link">
+        Арендовать машину
+      </a>
+    </li>
+
+    <li class="footer-li">
+      <a target="_blank" href="https://poezd.ru/?utm_source=travelpayouts&utm_medium=cpa&utm_campaign=e9aa94411d8d490184fe37e21-290725&referal_url=mail.google.com" class="footer-link">
+      Поиск билетов на поезд
+      </a>
+    </li>
+    
+    <li class="footer-li">
+      <a target="_blank" href="https://b2b.aviasales.ru/?utm_source=travelpayouts&sub_id=5ba30469a5774d858212654fc-290725" class="footer-link">
+      Авиабилеты для бизнесац
       </a>
     </li>
   </ul>
