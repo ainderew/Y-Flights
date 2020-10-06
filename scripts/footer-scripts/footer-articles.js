@@ -3,7 +3,7 @@ const footer = document.querySelector("footer");
 footer.innerHTML = `
 <div class="footer-inner">
 <div class="footer-col-1">
-  <h3 class="footer-h2">Обзоры популярных направлений</h3>
+  <h2 class="footer-h2">Обзоры популярных направлений</h2>
 
   <ul class="footer-ul">
     <li class="footer-li">
@@ -31,7 +31,7 @@ footer.innerHTML = `
 </div>
 
 <div class="footer-col-2">
-  <h3 class="footer-h2">Y-Flights.com &copy; 2020</h3>
+  <h2 class="footer-h2">Y-Flights.com &copy; 2020</h2>
 
   <div class="footer-align-container">
     <h3 class="footer-h4">
