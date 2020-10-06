@@ -3,12 +3,12 @@ const footer = document.querySelector("footer");
 footer.innerHTML = `
 <div class="footer-inner">
 <div class="footer-col-1">
-  <h2 class="footer-h2">Обзоры популярных направлений</h2>
+  <h2 class="footer-h2">Наши сервисы</h2>
 
   <ul class="footer-ul">
     <li class="footer-li">
       <a href="./" class="footer-link">
-      Наши сервисы
+      Поиск авиабилетов и отелей
       </a>
     </li>
 
