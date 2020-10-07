@@ -61,6 +61,8 @@ app.get("/", (req,res) => {
 //ROUTES
 const commentRoute = require("./Routes/Comment.route");
 const getCommentsRoute = require("./Routes/GetComments.route");
+const getTravelPayouts = require("./Routes/TravelPayouts");
 
 app.use("/comments", commentRoute);
 app.use("/getComments", getCommentsRoute);
+app.use("/TravelPayouts", getTravelPayouts);
