@@ -1,4 +1,4 @@
-const endpointURL = "http://localhost:5000/TravelPayouts/CheapTickets"
+const endpointURL = "https://y-flights.herokuapp.com/TravelPayouts/CheapTickets"
 
 
 
