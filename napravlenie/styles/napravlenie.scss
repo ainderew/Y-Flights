@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+// COMMON CLASSES
+.h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.h2{
+    font-size: 1.2rem;
+}
+
+.h1-header{
+    font-size: 2.2rem;
+    color: white;
+}
+.h2-header{
+    font-size: 1.7rem;
+    color: white;
+}
+
+.inner{
+    width: 60vw;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+
+// - - - - - - - -
+
+.section-1{
+    width: 100vw;
+    min-height: 50vh;
+    height: 100%;
+    // border: 1px solid red;
+    background: url(../../assets/images/header.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .sec-1-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.section-2{
+    margin: 2rem 0;
+}

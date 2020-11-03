@@ -1,10 +1,11 @@
 const endpointURL = "https://y-flights.herokuapp.com/TravelPayouts/CheapTickets"
 
+const CALENDAR = "https://y-flights.herokuapp.com/TravelPayouts/MonthPrices"
 
 
 const cheapTickets = async () => {
   await fetch(
-    `${endpointURL}`,
+    `${CALENDAR}`,
     {
       method: "GET",
       mode: "cors",
@@ -19,3 +20,6 @@ const cheapTickets = async () => {
 
 
 cheapTickets()
+
+
+// bc3e586d4ac8295cde912de926fa9a5e
